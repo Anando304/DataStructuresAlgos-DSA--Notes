@@ -2,11 +2,18 @@ package matrix_dfs;
 
 import java.util.List;
 
-public class GameBoardT extends DFS<CellT> {
-
+public class GameBoardT {
+	
+	private int start_x;
+	private int start_y;
+	private int end_x;
+	private int end_y;
+	
 	public GameBoardT(CellT[][] matrix, int start_x, int start_y, int end_x, int end_y) {
-		super(matrix, start_x, start_y, end_x, end_y);
-		
+		this.start_x = start_x;
+		this.start_y = start_y;
+		this.end_x = end_x;
+		this.end_y = end_y;
 	}
 	
 
@@ -25,10 +32,9 @@ public class GameBoardT extends DFS<CellT> {
 						   {CellT.B,CellT.B,CellT.R,CellT.O,CellT.G,CellT.B},
 						   {CellT.R,CellT.R,CellT.O,CellT.B,CellT.G,CellT.B}};
 		
-		GameBoardT game = new GameBoardT(matrix,0,0,1,2);
-		game.DFS_EXECUTE();
-		System.out.println(game.pathTo("0,0", "1,2"));
-		System.out.println(CellT.getRandomCell());
+		GameBoardT game = new GameBoardT(matrix,0,0,0,1);
+		System.out.println(DFS.DFS_EXECUTE(matrix,0,0,0,5));
+		//System.out.println(CellT.getRandomCell());
 	}
 	
 
