@@ -10,7 +10,7 @@ package matrix_dfs;
 @details This is an enum class for the various CellT types
 */
 public enum CellT{
-	R, O, G, B, P,;
+	R, O, G, B;
 	
     public static CellT getRandomCell() {
         return values()[(int) (Math.random()*((values().length)))];

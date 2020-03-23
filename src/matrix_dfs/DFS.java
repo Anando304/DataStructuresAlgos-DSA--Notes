@@ -13,7 +13,7 @@ public class DFS {
 
 	// (-1,0) = up, (0,1) = right, (1,0) = down, (0, - 1) = left
 	//Generic matrix, will be used to take type of CellT enums
-	public static Stack<String> DFS_EXECUTE(CellT[][] matrix, int start_x, int start_y, int end_x, int end_y) {
+	public static ArrayList<ArrayList<Integer>> DFS_EXECUTE(CellT[][] matrix, int start_x, int start_y, int end_x, int end_y) {
 		
     	//if invalid start & end coordinates
     	if(!validStartEnd(matrix, start_x, start_y, end_x, end_y)) {
@@ -42,6 +42,9 @@ public class DFS {
     	
     	//otherwise, find path to end point
     	movements(matrix, start_x, start_y, end_x, end_y,marked,edgeTo);
+    	if(!hasPathTo(end_x+","+end_y, marked)){
+    		return null;
+    	}
     	return pathTo(start_x+","+start_y, end_x+","+end_y,edgeTo,marked);
 
     }
@@ -104,7 +107,7 @@ public class DFS {
 			return marked.contains(endPoint);
 	}
     
-	private static Stack<String> pathTo(String startPoint, String endPoint, HashMap<String,String> edgeTo, HashSet<String> marked) { //Traverses backwards from destination/end node to the starting node with info from hashmap
+	private static ArrayList<ArrayList<Integer>> pathTo(String startPoint, String endPoint, HashMap<String,String> edgeTo, HashSet<String> marked) { //Traverses backwards from destination/end node to the starting node with info from hashmap
 		
 		//Checks if a path is available
         if (!hasPathTo(endPoint,marked)) {
@@ -117,7 +120,23 @@ public class DFS {
         	path.push(x);
         	x = edgeTo.get(x);
         }
-        return path;
+        
+        ArrayList<ArrayList<Integer>> path_forwards = new ArrayList<ArrayList<Integer>>();
+        while(!path.isEmpty()) {
+        	if(path.size()!=0) {
+        		String coordinate = path.pop();
+        		int x_coor = Integer.parseInt(coordinate.substring(0,coordinate.indexOf(",")));
+        		int y_coor = Integer.parseInt(coordinate.substring(coordinate.indexOf(",")+1));
+        		
+        		ArrayList<Integer> temp = new ArrayList<Integer>();
+        		temp.add(x_coor);
+        		temp.add(y_coor);
+        		path_forwards.add(temp);
+        	}
+        }
+        
+        return path_forwards;
+
     }
     		
     
@@ -134,7 +153,7 @@ public class DFS {
 
 		
 		
-		Stack<String> path = DFS.DFS_EXECUTE(matrix,0,0,0,2);
+		ArrayList<ArrayList<Integer>> path = DFS.DFS_EXECUTE(matrix,0,0,0,2);
 		System.out.println(path);
 
 	}
