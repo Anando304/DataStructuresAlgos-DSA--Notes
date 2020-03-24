@@ -15,5 +15,7 @@ public enum CellT{
     public static CellT getRandomCell() {
         return values()[(int) (Math.random()*((values().length)))];
     }
+    
+
 	
 }

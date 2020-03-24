@@ -1,6 +1,7 @@
 package matrix_dfs;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class GameBoardT {
@@ -31,6 +32,57 @@ public class GameBoardT {
 		this.score = 0;
 	}
 	
+	//kind of like a quicksort approach using p_index
+	//if valid path
+	public void move(int row1, int col1, int row2, int col2) {
+		ArrayList<ArrayList<Integer>> path = DFS.DFS_EXECUTE(boardT,row1,col1,row2,col2);
+		
+		if(! (path == null)) {
+			
+			//Empty the values in the coordinates of the path. Fill with null
+			for(ArrayList<Integer> coordinate : path) {
+				boardT[coordinate.get(0)][coordinate.get(1)] = null;
+			}
+			
+			for(ArrayList<Integer> coordinate : path) {
+				int row = coordinate.get(0);
+				int col = coordinate.get(1);
+				int p_index = row; //index pointer used to keep track of next top index that is null
+				
+				//linear time to pull down the above existing cells below. O(n) complexity
+				//Check each cells above cells removed from path. If exist, pull them down to p_index cell and increment p_index by 1 for pointer to next cell
+				for(int temp_row = row; temp_row>=0; temp_row--) {
+					if (boardT[temp_row][col] != null) {
+						boardT[p_index][col] = boardT[temp_row][col]; //drops cell down
+						boardT[temp_row][col] = null; //make the cell that previously had a value prior to dropping down, be null since nothing in there now
+						p_index--;
+					}
+				}
+				
+				//Filled dropped cells(that are now null) with a random CellT value
+				while(p_index>=0) {
+					boardT[p_index][col] = CellT.getRandomCell();
+					p_index--;
+				}
+			}
+		System.out.println("MOVE SUCCESSFUL!");
+		}
+		
+		/*else {
+			System.out.println
+		}*/
+
+	}
+	
+	public void print_board() {
+		for(CellT[] row : boardT) {
+			for(CellT col : row) {
+				System.out.print(col + "   ");
+			}
+			System.out.println();
+		}
+	}
+	
 
 	public static void main(String[] args) {
 		/*String matrix [][] = {{"RED","RED","RED","BLUE","RED","RED"},
@@ -48,22 +100,29 @@ public class GameBoardT {
 						   {CellT.R,CellT.B,CellT.O,CellT.B,CellT.G,CellT.B}};
 		
 		GameBoardT game = new GameBoardT();
-		System.out.println(DFS.DFS_EXECUTE(matrix,0,0,0,2));
+		game.initialize_board();
+		game.print_board();
+		game.move(2, 3, 2, 5);
+		game.print_board();
+		game.move(2, 0, 2, 1);
+		game.print_board();
+		//game.move(row1, col1, row2, col2);
+		//System.out.println(DFS.DFS_EXECUTE(matrix,0,0,0,2));
 		
-		String[] arr = {"1","2","3"};
-		
-		try {
+		/*try {
 			System.out.println(arr[3]);
 		}catch (Exception e) {
-			System.out.println("OUT OF BOUNDS");
-		}
+			System.out.println(e);
+		}*/
 
 		
 
-		System.out.println(CellT.getRandomCell());
-		game.initialize_board();
+		//System.out.println(CellT.getRandomCell());
 		//System.out.println(game.boardT[0][3]);
-		System.out.println(game.objectives);
+		//System.out.println(game.objectives);
+		
+		/*String[] arr1 = {"1","2","3"};
+		String[] arr2 = arr1;*/
 	}
 	
 

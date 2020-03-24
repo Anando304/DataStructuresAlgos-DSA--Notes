@@ -13,7 +13,7 @@ public class DFS {
 
 	// (-1,0) = up, (0,1) = right, (1,0) = down, (0, - 1) = left
 	//Generic matrix, will be used to take type of CellT enums
-	public static ArrayList<ArrayList<Integer>> DFS_EXECUTE(CellT[][] matrix, int start_x, int start_y, int end_x, int end_y) {
+	public static <T> ArrayList<ArrayList<Integer>> DFS_EXECUTE(T[][] matrix, int start_x, int start_y, int end_x, int end_y) {
 		
     	//if invalid start & end coordinates
     	if(!validStartEnd(matrix, start_x, start_y, end_x, end_y)) {
@@ -49,14 +49,14 @@ public class DFS {
 
     }
     
-    private static boolean validStartEnd(CellT[][] matrix,int start_x, int start_y, int end_x, int end_y) {
+    private static <T> boolean validStartEnd(T[][] matrix,int start_x, int start_y, int end_x, int end_y) {
     	
     	//checks if within matrix boundaries
     	return ((start_x>=0) && (start_x<matrix.length) && (start_y>=0) && (start_y<matrix[0].length));
     	
     }
     
-    private static boolean same_cell_data(CellT[][] matrix,int start_x, int start_y, int end_x, int end_y) {
+    private static <T> boolean same_cell_data(T[][] matrix,int start_x, int start_y, int end_x, int end_y) {
     	
     	//checks if the data between two cells are the same
     	//NOTE: start_x and start_y will change each time recursively find new point to check, but end_x and end_y will remain same as OUR DESTINATION remains UNCHANGED
@@ -70,7 +70,7 @@ public class DFS {
     }
     
     
-    private static void movements(CellT[][] matrix,int start_x, int start_y, int end_x, int end_y,HashSet<String> marked,HashMap<String,String> edgeTo) {
+    private static <T> void movements(T[][] matrix,int start_x, int start_y, int end_x, int end_y,HashSet<String> marked,HashMap<String,String> edgeTo) {
 
 		//Check if coordinates within bounds
     	if(validStartEnd(matrix,start_x,start_y,end_x,end_y)) {
@@ -151,7 +151,6 @@ public class DFS {
 							   {CellT.B,CellT.B,CellT.R,CellT.O,CellT.G,CellT.B},
 							   {CellT.R,CellT.R,CellT.O,CellT.B,CellT.G,CellT.B}};
 
-		
 		
 		ArrayList<ArrayList<Integer>> path = DFS.DFS_EXECUTE(matrix,0,0,0,2);
 		System.out.println(path);
