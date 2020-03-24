@@ -27,8 +27,8 @@ public class GameBoardT {
 		
 		this.boardT = temp.clone();
 		this.moves = 20;
+		this.objectives.add(CellT.R);
 		this.objectives.add(6);
-		this.objectives.add(CellT.getRandomCell());
 		this.score = 0;
 	}
 	
@@ -36,9 +36,19 @@ public class GameBoardT {
 	//if valid path
 	public void move(int row1, int col1, int row2, int col2) {
 		ArrayList<ArrayList<Integer>> path = DFS.DFS_EXECUTE(boardT,row1,col1,row2,col2);
+
+		if(moves<=0) {
+			System.out.println("Game Over. Ran out of moves");
+			System.out.println("Score: " + score);
+		}
+		
+		else if((Integer)objectives.get(1)<=0) {
+			System.out.println("You Win!");
+			System.out.println("Score: " + score);
+		}
 		
 		if(! (path == null)) {
-			
+			CellT type = boardT[row1][row2]; //used for comparison for objective calculation
 			//Empty the values in the coordinates of the path. Fill with null
 			for(ArrayList<Integer> coordinate : path) {
 				boardT[coordinate.get(0)][coordinate.get(1)] = null;
@@ -65,7 +75,17 @@ public class GameBoardT {
 					p_index--;
 				}
 			}
-		System.out.println("MOVE SUCCESSFUL!");
+		moves--;
+		score+=path.size();
+		if(objectives.get(0).equals(type)) {
+			System.out.println("PASSED");
+			objectives.set(1, (Integer)objectives.get(1) - path.size());
+			}
+		
+		System.out.println("MOVE " + "("+ String.valueOf(row1) +","+ String.valueOf(col1) + ") ," + "("+ String.valueOf(row2) +","+ String.valueOf(col2) + ")" + " --> SUCCESSFUL!");
+		System.out.println("Objective: " + objectives.get(0) + ", " + objectives.get(1));
+		System.out.println("Score: " + score);
+		System.out.println("Remaining moves: " + moves);
 		}
 		
 		/*else {
@@ -81,6 +101,7 @@ public class GameBoardT {
 			}
 			System.out.println();
 		}
+		System.out.println("***************************");
 	}
 	
 
@@ -106,6 +127,9 @@ public class GameBoardT {
 		game.print_board();
 		game.move(2, 0, 2, 1);
 		game.print_board();
+		game.move(1, 0, 1, 2);
+		game.print_board();
+		
 		//game.move(row1, col1, row2, col2);
 		//System.out.println(DFS.DFS_EXECUTE(matrix,0,0,0,2));
 		
