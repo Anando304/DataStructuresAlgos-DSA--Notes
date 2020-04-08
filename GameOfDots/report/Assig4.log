@@ -1,0 +1,622 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.7)  8 APR 2020 19:39
+entering extended mode
+**./Assig4.tex
+(Assig4.tex
+LaTeX2e <2019-10-01> patch level 3
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
+Document Class: article 2019/10/25 v1.4k Standard LaTeX document class
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size12.clo"
+File: size12.clo 2019/10/25 v1.4k Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.
+sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.st
+y"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.
+sty"
+Package: graphics 2019/11/01 v1.3d Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graph
+ics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdfte
+x.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/latex/paralist\paralist.
+sty"
+Package: paralist 2017/01/22 v2.7 Extended list environments
+\pltopsep=\skip43
+\plpartopsep=\skip44
+\plitemsep=\skip45
+\plparsep=\skip46
+\pl@lab=\toks15
+)
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.
+sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks16
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.st
+y"
+Package: amsmath 2019/11/16 v2.17d AMS math features
+\@mathmargin=\skip47
+
+For additional information on amsmath, use the `?' option.
+
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.st
+y"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty
+"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen105
+))
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty
+"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen106
+)
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty
+"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count88
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count89
+\leftroot@=\count90
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count91
+\DOTSCASE@=\count92
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen107
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count93
+\c@MaxMatrixCols=\count94
+\dotsspace@=\muskip10
+\c@parentequation=\count95
+\dspbrk@lvl=\count96
+\tag@help=\toks18
+\row@=\count97
+\column@=\count98
+\maxfields@=\count99
+\andhelp@=\toks19
+\eqnshift@=\dimen108
+\alignsep@=\dimen109
+\tagshift@=\dimen110
+\tagwidth@=\dimen111
+\totwidth@=\dimen112
+\lineht@=\dimen113
+\@envbody=\toks20
+\multlinegap=\skip48
+\multlinetaggap=\skip49
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2858.
+LaTeX Info: Redefining \] on input line 2859.
+)
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\hhline.sty"
+Package: hhline 2014/10/28 v2.03 Table rule package (DPC)
+)
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/latex/booktabs\booktabs.
+sty"
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen114
+\lightrulewidth=\dimen115
+\cmidrulewidth=\dimen116
+\belowrulesep=\dimen117
+\belowbottomsep=\dimen118
+\aboverulesep=\dimen119
+\abovetopsep=\dimen120
+\cmidrulesep=\dimen121
+\cmidrulekern=\dimen122
+\defaultaddspace=\dimen123
+\@cmidla=\count100
+\@cmidlb=\count101
+\@aboverulesep=\dimen124
+\@belowrulesep=\dimen125
+\@thisruleclass=\count102
+\@lastruleclass=\count103
+\@thisrulewidth=\dimen126
+)
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/latex/multirow\multirow.
+sty"
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip50
+\multirow@cntb=\count104
+\multirow@dima=\skip51
+\bigstrutjot=\dimen127
+)
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\multicol.sty
+"
+Package: multicol 2019/03/01 v1.8w multicolumn formatting (FMi)
+\c@tracingmulticols=\count105
+\mult@box=\box29
+\multicol@leftmargin=\dimen128
+\c@unbalance=\count106
+\c@collectmore=\count107
+\doublecol@number=\count108
+\multicoltolerance=\count109
+\multicolpretolerance=\count110
+\full@width=\dimen129
+\page@free=\dimen130
+\premulticols=\dimen131
+\postmulticols=\dimen132
+\multicolsep=\skip52
+\multicolbaselineskip=\skip53
+\partial@page=\box30
+\last@line=\box31
+\maxbalancingoverflow=\dimen133
+\mult@rightbox=\box32
+\mult@grightbox=\box33
+\mult@gfirstbox=\box34
+\mult@firstbox=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\c@minrows=\count111
+\c@columnbadness=\count112
+\c@finalcolumnbadness=\count113
+\last@try=\dimen134
+\multicolovershoot=\dimen135
+\multicolundershoot=\dimen136
+\mult@nat@firstbox=\box53
+\colbreak@box=\box54
+\mc@col@check@num=\count114
+)
+\c@stepnum=\count115
+
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\color.sty
+"
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\color
+.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+) (Assig4.aux)
+\openout1 = `Assig4.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
+df.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count116
+\scratchdimen=\dimen137
+\scratchbox=\box55
+\nofMPsegments=\count117
+\nofMParguments=\count118
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count119
+\MPscratchDim=\dimen138
+\MPnumerator=\count120
+\makeMPintoPDFobject=\count121
+\everyMPtoPDFconversion=\toks23
+)
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epsto
+pdf-base.sty"
+Package: epstopdf-base 2019/11/24 v2.7 Base part for package epstopdf
+
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\infware
+rr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfext.st
+y"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvdefin
+ekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ltxcmds
+.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvoptions
+.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvsetke
+ys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\etexcmd
+s.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifluatex.s
+ty"
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\iftex.sty"
+Package: iftex 2019/11/07 v1.0c TeX engine tests
+)))))
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pdftexcmds\pdftexc
+mds.sty"
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+42.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 460.
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
+
+
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
+
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Underfull \hbox (badness 10000) in paragraph at lines 48--52
+
+ []
+
+[1
+
+{C:/Users/anand/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 7
+5.
+
+("C:\Users\anand\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 75.
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
+
+ []
+
+[2] [3] [4] [5]
+Overfull \hbox (52.64232pt too wide) in paragraph at lines 187--188
+\OT1/cmr/m/n/12 cells to each other to sim-u-late a path. For ex-am-ple; the us
+er can in-put [[1,2],[1,3],[2,3],[2,4],[3,4]]
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 213--216
+
+ []
+
+
+Overfull \hbox (56.8451pt too wide) in paragraph at lines 221--222
+[]\OT1/cmr/m/n/12 transition:= $\OML/cmm/m/it/12 valid[]coordinate\OT1/cmr/m/n/
+12 (\OML/cmm/m/it/12 path\OT1/cmr/m/n/12 [0][0]\OML/cmm/m/it/12 ; path\OT1/cmr/
+m/n/12 [0][1])  \OMS/cmsy/m/n/12 ^  \OML/cmm/m/it/12 valid[]path\OT1/cmr/m/n/12
+ (\OML/cmm/m/it/12 path\OT1/cmr/m/n/12 [0][0]\OML/cmm/m/it/12 ; path\OT1/cmr/m/
+n/12 [0][1]\OML/cmm/m/it/12 ; path\OT1/cmr/m/n/12 ))  \OMS/cmsy/m/n/12 ^
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
+
+ []
+
+
+Overfull \hbox (17.48541pt too wide) in paragraph at lines 223--226
+\OMS/cmsy/m/n/12 j :\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 valid[]path\OT1/cmr/m/n/1
+2 (\OML/cmm/m/it/12 path\OT1/cmr/m/n/12 [0][0]\OML/cmm/m/it/12 ; path\OT1/cmr/m
+/n/12 [0][1]\OML/cmm/m/it/12 ; path\OT1/cmr/m/n/12 )  = \OML/cmm/m/it/12 null\O
+T1/cmr/m/n/12 )  \OMS/cmsy/m/n/12 !  \OML/cmm/m/it/12 IndexOutOfBoundsException
+$ 
+ []
+
+
+Overfull \hbox (108.2707pt too wide) in paragraph at lines 223--226
+\OMS/cmsy/m/n/12 j :\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 one[]direction\OT1/cmr/m/
+n/12 (\OML/cmm/m/it/12 path\OT1/cmr/m/n/12 )) \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/
+12 IllegalArgumentException$ $ $ $\OMS/cmsy/m/n/12 j \OML/cmm/m/it/12 game[]ove
+r\OT1/cmr/m/n/12 ()  \OMS/cmsy/m/n/12 !  \OML/cmm/m/it/12 IllegalArgumentExcept
+ion$ 
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 263--265
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--268
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--271
+
+ []
+
+
+Overfull \hbox (89.68425pt too wide) in paragraph at lines 272--275
+\OT1/cmr/m/n/12 same-cell-data$(\OML/cmm/m/it/12 start[]row; start[]col; row; c
+ol\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12  \OML/cmm/m/it/12 get[]boardT\OT1/cmr/m/n
+/12 ()[\OML/cmm/m/it/12 start[]row\OT1/cmr/m/n/12 ][\OML/cmm/m/it/12 start[]col
+\OT1/cmr/m/n/12 ]$ = $\OML/cmm/m/it/12 get[]boardT\OT1/cmr/m/n/12 ()[\OML/cmm/m
+/it/12 row\OT1/cmr/m/n/12 ][\OML/cmm/m/it/12 col\OT1/cmr/m/n/12 ]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 272--275
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 276--278
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 279--281
+
+ []
+
+
+Overfull \hbox (32.8998pt too wide) in paragraph at lines 282--284
+\OT1/cmr/m/n/12 same-cell-data$(\OML/cmm/m/it/12 start[]row; start[]col; row; c
+ol\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12  \OML/cmm/m/it/12 boardT\OT1/cmr/m/n/12 [
+\OML/cmm/m/it/12 start[]row\OT1/cmr/m/n/12 ][\OML/cmm/m/it/12 start[]col\OT1/cm
+r/m/n/12 ] = \OML/cmm/m/it/12 boardT\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 row\OT1/c
+mr/m/n/12 ][\OML/cmm/m/it/12 col\OT1/cmr/m/n/12 ]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 282--284
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 282--284
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 282--284
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 285--289
+
+ []
+
+
+Overfull \hbox (63.93774pt too wide) in paragraph at lines 290--293
+\OML/cmm/m/it/12 valid[]coordinates\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 path\OT1/c
+mr/m/n/12 [\OML/cmm/m/it/12 i\OT1/cmr/m/n/12 ][0]\OML/cmm/m/it/12 ;  path\OT1/c
+mr/m/n/12 [\OML/cmm/m/it/12 i\OT1/cmr/m/n/12 ][1])  \OMS/cmsy/m/n/12 ^  \OML/cm
+m/m/it/12 same[]cell[]data\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 path\OT1/cmr/m/n/12
+ [0][0]\OML/cmm/m/it/12 ;  path\OT1/cmr/m/n/12 [0][1]\OML/cmm/m/it/12 ;  path\O
+T1/cmr/m/n/12 [\OML/cmm/m/it/12 i\OT1/cmr/m/n/12 ][0]\OML/cmm/m/it/12 ;  path\O
+T1/cmr/m/n/12 [\OML/cmm/m/it/12 i\OT1/cmr/m/n/12 ][1]))$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--293
+
+ []
+
+[9]
+Overfull \hbox (19.25772pt too wide) in paragraph at lines 338--339
+\OT1/cmr/m/n/12 move is ex-e-cuted. The $\OML/cmm/m/it/12 print[]info$ \OT1/cmr
+/m/n/12 method takes $\OML/cmm/m/it/12 objective[]cell;  objective[]target;  sc
+ore; $ 
+ []
+
+[10]
+Overfull \hbox (15.98795pt too wide) in paragraph at lines 357--378
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 383--385
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--392
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 397--398
+
+ []
+
+
+Overfull \hbox (17.48541pt too wide) in paragraph at lines 399--402
+\OMS/cmsy/m/n/12 j :\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 valid[]path\OT1/cmr/m/n/1
+2 (\OML/cmm/m/it/12 path\OT1/cmr/m/n/12 [0][0]\OML/cmm/m/it/12 ; path\OT1/cmr/m
+/n/12 [0][1]\OML/cmm/m/it/12 ; path\OT1/cmr/m/n/12 )  = \OML/cmm/m/it/12 null\O
+T1/cmr/m/n/12 )  \OMS/cmsy/m/n/12 !  \OML/cmm/m/it/12 IndexOutOfBoundsException
+$ 
+ []
+
+
+Overfull \hbox (94.39575pt too wide) in paragraph at lines 399--402
+\OMS/cmsy/m/n/12 j \OT1/cmr/m/n/12 !\OML/cmm/m/it/12 one[]direction\OT1/cmr/m/n
+/12 (\OML/cmm/m/it/12 path\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12
+ IllegalArgumentException$ $ $ $\OMS/cmsy/m/n/12 j \OML/cmm/m/it/12 game[]over\
+OT1/cmr/m/n/12 ()  \OMS/cmsy/m/n/12 !  \OML/cmm/m/it/12 IllegalArgumentExceptio
+n$ 
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 450--452
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 453--454
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 455--456
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 457--458
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 459--460
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 461--462
+
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 463--464
+
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 478--479
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 480--481
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 482--483
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 484--485
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--487
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 488--489
+
+ []
+
+<code.jpg, id=56, 3125.6775pt x 1798.72pt>
+File: code.jpg Graphic file (type jpg)
+<use code.jpg>
+Package pdftex.def Info: code.jpg  used on input line 490.
+(pdftex.def)             Requested size: 312.58606pt x 179.88254pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 492--493
+
+ []
+
+<flowdiagram.jpg, id=57, 2971.1pt x 2910.875pt>
+File: flowdiagram.jpg Graphic file (type jpg)
+<use flowdiagram.jpg>
+Package pdftex.def Info: flowdiagram.jpg  used on input line 494.
+(pdftex.def)             Requested size: 356.51662pt x 349.28993pt.
+[16 <./code.jpg>] [17 <./flowdiagram.jpg>] (Assig4.aux) ) 
+Here is how much of TeX's memory you used:
+ 2717 strings out of 492480
+ 38693 string characters out of 3121497
+ 110294 words of memory out of 3000000
+ 7010 multiletter control sequences out of 15000+200000
+ 12750 words of font info for 49 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 55i,8n,32p,1105b,261s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/anand/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users
+/anand/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.
+pfb><C:/Users/anand/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmr12.pfb><C:/Users/anand/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmr17.pfb><C:/Users/anand/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/anand/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/anand/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/anan
+d/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.
+pfb>
+Output written on Assig4.pdf (17 pages, 3385945 bytes).
+PDF statistics:
+ 91 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+

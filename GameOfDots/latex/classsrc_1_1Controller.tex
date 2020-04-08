@@ -1,0 +1,174 @@
+\hypertarget{classsrc_1_1Controller}{}\section{src.\+Controller Class Reference}
+\label{classsrc_1_1Controller}\index{src.\+Controller@{src.\+Controller}}
+
+
+This class outputs the controller to update model and view.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsrc_1_1Controller_aeff9a0c7be01117a7ee1a3029d908b92}{Controller} (\hyperlink{classsrc_1_1GameBoardT}{Game\+BoardT} gameboard, \hyperlink{classsrc_1_1View}{View} view)
+\begin{DoxyCompactList}\small\item\em Constructor that that initializes for the controller. \end{DoxyCompactList}\item 
+\hyperlink{enumsrc_1_1CellT}{CellT} \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \hyperlink{classsrc_1_1Controller_af977f21ac362867f8a347b18a3daab74}{get\+\_\+game\+\_\+boardT} ()
+\begin{DoxyCompactList}\small\item\em Getter method used to retrieve boardT grid. \end{DoxyCompactList}\item 
+Array\+List \hyperlink{classsrc_1_1Controller_a8d1999a35f647370310918dbe75597d8}{get\+\_\+game\+\_\+obj} ()
+\begin{DoxyCompactList}\small\item\em Getter method used to retrieve objectives. \end{DoxyCompactList}\item 
+int \hyperlink{classsrc_1_1Controller_a00df1a90b7ef485f2715e23df920aee4}{get\+\_\+game\+\_\+score} ()
+\begin{DoxyCompactList}\small\item\em Getter method used to retrieve score. \end{DoxyCompactList}\item 
+int \hyperlink{classsrc_1_1Controller_adea400edf10a1561c5832f86a81d805b}{get\+\_\+game\+\_\+moves} ()
+\begin{DoxyCompactList}\small\item\em Getter method used to retrieve number of moves. \end{DoxyCompactList}\item 
+void \hyperlink{classsrc_1_1Controller_aa1d328484901f41258cac4205803eeb4}{execute\+\_\+move} (int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} path)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classsrc_1_1Controller}{Controller} Method that updates the boardT after a valid move. \end{DoxyCompactList}\item 
+void \hyperlink{classsrc_1_1Controller_abb1eafa89e545370a7ad98e293731d04}{update\+View} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classsrc_1_1Controller}{Controller} method that updates the view output for the user. \end{DoxyCompactList}\item 
+boolean \hyperlink{classsrc_1_1Controller_ada325ebb1e30dea7f65ea1259a06ea22}{game\+\_\+over} ()
+\begin{DoxyCompactList}\small\item\em Checks if game is over when ran out of available moves. \end{DoxyCompactList}\item 
+boolean \hyperlink{classsrc_1_1Controller_a713dfa8a1f3d29238e099598b08ca30b}{is\+\_\+win} ()
+\begin{DoxyCompactList}\small\item\em Checks if user has won the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class outputs the controller to update model and view. 
+
+\hyperlink{classsrc_1_1Controller}{Controller} of the M\+VC design pattern 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsrc_1_1Controller_aeff9a0c7be01117a7ee1a3029d908b92}\label{classsrc_1_1Controller_aeff9a0c7be01117a7ee1a3029d908b92}} 
+\index{src\+::\+Controller@{src\+::\+Controller}!Controller@{Controller}}
+\index{Controller@{Controller}!src\+::\+Controller@{src\+::\+Controller}}
+\subsubsection{\texorpdfstring{Controller()}{Controller()}}
+{\footnotesize\ttfamily src.\+Controller.\+Controller (\begin{DoxyParamCaption}\item[{\hyperlink{classsrc_1_1GameBoardT}{Game\+BoardT}}]{gameboard,  }\item[{\hyperlink{classsrc_1_1View}{View}}]{view }\end{DoxyParamCaption})}
+
+
+
+Constructor that that initializes for the controller. 
+
+Initializes the model(gameboard) and view modules 
+\begin{DoxyParams}{Parameters}
+{\em gameboard} & represents a GameboardT object \\
+\hline
+{\em view} & represents a \hyperlink{classsrc_1_1View}{View} object \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsrc_1_1Controller_aa1d328484901f41258cac4205803eeb4}\label{classsrc_1_1Controller_aa1d328484901f41258cac4205803eeb4}} 
+\index{src\+::\+Controller@{src\+::\+Controller}!execute\+\_\+move@{execute\+\_\+move}}
+\index{execute\+\_\+move@{execute\+\_\+move}!src\+::\+Controller@{src\+::\+Controller}}
+\subsubsection{\texorpdfstring{execute\+\_\+move()}{execute\_move()}}
+{\footnotesize\ttfamily void src.\+Controller.\+execute\+\_\+move (\begin{DoxyParamCaption}\item[{int}]{path\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classsrc_1_1Controller}{Controller} Method that updates the boardT after a valid move. 
+
+Mutator method that updates the boardT with a valid path from user 
+\begin{DoxyParams}{Parameters}
+{\em path} & represents the 2D integer array of the path chosen by the client \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Null\+Pointer\+Exception,Index\+Out\+Of\+Bounds\+Exception,Illegal\+Argument\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classsrc_1_1Controller_ada325ebb1e30dea7f65ea1259a06ea22}\label{classsrc_1_1Controller_ada325ebb1e30dea7f65ea1259a06ea22}} 
+\index{src\+::\+Controller@{src\+::\+Controller}!game\+\_\+over@{game\+\_\+over}}
+\index{game\+\_\+over@{game\+\_\+over}!src\+::\+Controller@{src\+::\+Controller}}
+\subsubsection{\texorpdfstring{game\+\_\+over()}{game\_over()}}
+{\footnotesize\ttfamily boolean src.\+Controller.\+game\+\_\+over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if game is over when ran out of available moves. 
+
+Outputs a boolean signifying if available moves is $<$ = 0 \begin{DoxyReturn}{Returns}
+returns True if available moves is less than or equal to 0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsrc_1_1Controller_af977f21ac362867f8a347b18a3daab74}\label{classsrc_1_1Controller_af977f21ac362867f8a347b18a3daab74}} 
+\index{src\+::\+Controller@{src\+::\+Controller}!get\+\_\+game\+\_\+boardT@{get\+\_\+game\+\_\+boardT}}
+\index{get\+\_\+game\+\_\+boardT@{get\+\_\+game\+\_\+boardT}!src\+::\+Controller@{src\+::\+Controller}}
+\subsubsection{\texorpdfstring{get\+\_\+game\+\_\+board\+T()}{get\_game\_boardT()}}
+{\footnotesize\ttfamily \hyperlink{enumsrc_1_1CellT}{CellT} \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} src.\+Controller.\+get\+\_\+game\+\_\+boardT (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter method used to retrieve boardT grid. 
+
+getter method to return the boardT state variable \begin{DoxyReturn}{Returns}
+Returns a 2D array of \hyperlink{enumsrc_1_1CellT}{CellT} representing the boardT 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsrc_1_1Controller_adea400edf10a1561c5832f86a81d805b}\label{classsrc_1_1Controller_adea400edf10a1561c5832f86a81d805b}} 
+\index{src\+::\+Controller@{src\+::\+Controller}!get\+\_\+game\+\_\+moves@{get\+\_\+game\+\_\+moves}}
+\index{get\+\_\+game\+\_\+moves@{get\+\_\+game\+\_\+moves}!src\+::\+Controller@{src\+::\+Controller}}
+\subsubsection{\texorpdfstring{get\+\_\+game\+\_\+moves()}{get\_game\_moves()}}
+{\footnotesize\ttfamily int src.\+Controller.\+get\+\_\+game\+\_\+moves (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter method used to retrieve number of moves. 
+
+Gets the number of moves remaining anytime during the game \begin{DoxyReturn}{Returns}
+Returns an integer containing the number of moves remaining 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsrc_1_1Controller_a8d1999a35f647370310918dbe75597d8}\label{classsrc_1_1Controller_a8d1999a35f647370310918dbe75597d8}} 
+\index{src\+::\+Controller@{src\+::\+Controller}!get\+\_\+game\+\_\+obj@{get\+\_\+game\+\_\+obj}}
+\index{get\+\_\+game\+\_\+obj@{get\+\_\+game\+\_\+obj}!src\+::\+Controller@{src\+::\+Controller}}
+\subsubsection{\texorpdfstring{get\+\_\+game\+\_\+obj()}{get\_game\_obj()}}
+{\footnotesize\ttfamily Array\+List src.\+Controller.\+get\+\_\+game\+\_\+obj (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter method used to retrieve objectives. 
+
+getter method to return the objectives state variable \begin{DoxyReturn}{Returns}
+Returns an arraylist containing objective parameters 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsrc_1_1Controller_a00df1a90b7ef485f2715e23df920aee4}\label{classsrc_1_1Controller_a00df1a90b7ef485f2715e23df920aee4}} 
+\index{src\+::\+Controller@{src\+::\+Controller}!get\+\_\+game\+\_\+score@{get\+\_\+game\+\_\+score}}
+\index{get\+\_\+game\+\_\+score@{get\+\_\+game\+\_\+score}!src\+::\+Controller@{src\+::\+Controller}}
+\subsubsection{\texorpdfstring{get\+\_\+game\+\_\+score()}{get\_game\_score()}}
+{\footnotesize\ttfamily int src.\+Controller.\+get\+\_\+game\+\_\+score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter method used to retrieve score. 
+
+getter method to return the score state variable \begin{DoxyReturn}{Returns}
+Returns an integer containing the score 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsrc_1_1Controller_a713dfa8a1f3d29238e099598b08ca30b}\label{classsrc_1_1Controller_a713dfa8a1f3d29238e099598b08ca30b}} 
+\index{src\+::\+Controller@{src\+::\+Controller}!is\+\_\+win@{is\+\_\+win}}
+\index{is\+\_\+win@{is\+\_\+win}!src\+::\+Controller@{src\+::\+Controller}}
+\subsubsection{\texorpdfstring{is\+\_\+win()}{is\_win()}}
+{\footnotesize\ttfamily boolean src.\+Controller.\+is\+\_\+win (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if user has won the game. 
+
+Outputs a boolean if user has met the objective \begin{DoxyReturn}{Returns}
+returns True if objective has reached or gone below 0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsrc_1_1Controller_abb1eafa89e545370a7ad98e293731d04}\label{classsrc_1_1Controller_abb1eafa89e545370a7ad98e293731d04}} 
+\index{src\+::\+Controller@{src\+::\+Controller}!update\+View@{update\+View}}
+\index{update\+View@{update\+View}!src\+::\+Controller@{src\+::\+Controller}}
+\subsubsection{\texorpdfstring{update\+View()}{updateView()}}
+{\footnotesize\ttfamily void src.\+Controller.\+update\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classsrc_1_1Controller}{Controller} method that updates the view output for the user. 
+
+Outputs the state variables for the game by printing to the console 
+\begin{DoxyExceptions}{Exceptions}
+{\em Null\+Pointer\+Exception,Index\+Out\+Of\+Bounds\+Exception,Illegal\+Argument\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{Controller_8java}{Controller.\+java}\end{DoxyCompactItemize}
