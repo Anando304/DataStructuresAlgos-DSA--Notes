@@ -1,0 +1,468 @@
+\documentclass[12pt]{article}
+
+\usepackage{graphicx}
+\usepackage{paralist}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{hhline}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{url}
+
+\oddsidemargin -10mm
+\evensidemargin -10mm
+\textwidth 160mm
+\textheight 200mm
+\renewcommand\baselinestretch{1.0}
+
+\pagestyle {plain}
+\pagenumbering{arabic}
+
+\newcounter{stepnum}
+
+%% Comments
+
+\usepackage{color}
+
+\newif\ifcomments\commentstrue
+
+\ifcomments
+\newcommand{\authornote}[3]{\textcolor{#1}{[#3 ---#2]}}
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+\else
+\newcommand{\authornote}[3]{}
+\newcommand{\todo}[1]{}
+\fi
+
+\newcommand{\wss}[1]{\authornote{blue}{SS}{#1}}
+
+\title{Assignment 3, Part 1, Specification}
+\author{SFWR ENG 2AA4}
+
+\begin {document}
+
+\maketitle
+This Module Interface Specification (MIS) document contains modules, types and
+methods for implementing a generic 2D sequence that is instantiated for both
+land use planning and for a Discrete Elevation Model (DEM).
+
+In applying the specification, there may be cases that involve undefinedness.
+We will interpret undefinedness following~\cite{Farmer2004}:
+
+If $p: \alpha_1 \times .... \times \alpha_n \rightarrow \mathbb{B}$ and any of
+$a_1, ..., a_n$ is undefined, then $p(a_1, ..., a_n)$ is False.  For instance,
+if $p(x) = 1/x < 1$, then $p(0) = \text{False}$.  In the language of our
+specification, if evaluating an expression generates an exception, then the
+value of the expression is undefined.
+
+\wss{The parts that you need to fill in are marked by comments, like this one.
+  In several of the modules local functions are specified.  You can use these
+  local functions to complete the missing specifications.}
+
+\wss{As you edit the tex source, please leave the \texttt{wss} comments in the
+  file.  Put your answer \textbf{after} the comment.  This will make grading
+  easier.}
+
+\bibliographystyle{plain}
+\bibliography{SmithCollectedRefs}
+
+\newpage
+
+\section* {Land Use Type Module}
+
+\subsection*{Module}
+
+LanduseT
+
+\subsection* {Uses}
+
+N/A
+
+\subsection* {Syntax}
+
+\subsubsection* {Exported Constants}
+
+None
+
+\subsubsection* {Exported Types}
+
+Landtypes = \{R, T, A, C\}\\
+
+\noindent \textit{//R stands for Recreational, T for Transport, A for Agricultural, C for
+  Commercial}
+
+\subsubsection* {Exported Access Programs}
+
+\begin{tabular}{| l | l | l | p{5cm} |}
+\hline
+\textbf{Routine name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions}\\
+\hline
+new LanduseT & Landtypes & LanduseT & ~\\
+\hline
+\end{tabular}
+
+\subsection* {Semantics}
+
+\subsubsection* {State Variables}
+
+landuse: Landtypes
+
+\subsubsection* {State Invariant}
+
+None
+
+\subsubsection* {Access Routine Semantics}
+
+\noindent new LandUseT($t$):
+\begin{itemize}
+\item transition: $\mathit{landuse} := t$
+\item output: $out := \mbox{self}$
+\item exception: none
+\end{itemize}
+
+\subsubsection* {Considerations}
+
+When implementing in Java, use enums (as shown in Tutorial 06 for ElementT).
+
+\newpage
+
+\section* {Point ADT Module}
+
+\subsection*{Template Module inherits Equality(PointT)}
+
+PointT
+
+\subsection* {Uses}
+
+N/A
+
+\subsection* {Syntax}
+
+\subsubsection* {Exported Types}
+
+\wss{What should be written here?} PointT = ?
+
+\subsubsection* {Exported Access Programs}
+
+\begin{tabular}{| l | l | l | l |}
+\hline
+\textbf{Routine name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions}\\
+\hline
+PointT & $\mathbb{Z}$, $\mathbb{Z}$ & PointT & \\
+\hline
+row & ~ & $\mathbb{Z}$ & ~\\
+\hline
+col & ~ & $\mathbb{Z}$ & ~\\
+\hline
+translate & $\mathbb{Z}$, $\mathbb{Z}$ & PointT & ~\\
+\hline
+\end{tabular}
+
+\subsection* {Semantics}
+
+\subsubsection* {State Variables}
+
+$r$: \wss{What is the type of the state variables?} $\mathbb{Z}$\\
+$c$: \wss{What is the type of the state variables?} $\mathbb{Z}$
+
+\subsubsection* {State Invariant}
+
+None
+
+\subsubsection* {Assumptions}
+
+The constructor PointT is called for each object instance before any other
+access routine is called for that object.  The constructor cannot be called on
+an existing object.
+
+\subsubsection* {Access Routine Semantics}
+
+PointT($row, col$):
+\begin{itemize}
+\item transition: \wss{What should the state transition be for the constructor?} \\$r, c := row, col$
+\item output: $out := \mathit{self}$
+\item exception: None
+\end{itemize}
+
+\noindent row():
+\begin{itemize}
+\item output: $out := r$
+\item exception: None
+\end{itemize}
+
+\noindent col():
+\begin{itemize}
+\item \wss{What should go here?} $out := c$
+\item exception: None
+\end{itemize}
+
+\noindent translate($\Delta r$, $\Delta c$):
+\begin{itemize}
+\item \wss{What should go here?} $out := \mbox{PointT}(r + \Delta r, c + \Delta c)$
+\item exception: \wss{What should go here?} None
+\end{itemize}
+
+\newpage
+
+\section* {Generic Seq2D Module}
+
+\subsection* {Generic Template Module}
+
+Seq2D(T)
+
+\subsection* {Uses}
+
+PointT
+
+\subsection* {Syntax}
+
+\subsubsection* {Exported Types}
+
+Seq2D(T) = ?
+
+\subsubsection* {Exported Constants}
+
+None
+
+\subsubsection* {Exported Access Programs}
+
+\begin{tabular}{| l | l | l | p{6cm} |}
+\hline
+\textbf{Routine name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions}\\
+\hline
+Seq2D & seq of (seq of T), $\mathbb{R}$ & Seq2D & IllegalArgumentException\\
+\hline
+set & PointT, T & ~ & IndexOutOfBoundsException\\
+\hline
+get & PointT & T & IndexOutOfBoundsException\\
+\hline
+getNumRow & ~ & $\mathbb{N}$ & \\
+\hline
+getNumCol & ~ & $\mathbb{N}$ & \\
+\hline
+getScale & ~ & $\mathbb{R}$ & \\
+\hline
+count & T & $\mathbb{N}$ & \\
+\hline
+countRow & T, $\mathbb{N}$ & $\mathbb{N}$ & \\
+\hline
+area & T & $\mathbb{R}$ & \\
+\hline
+\end{tabular}
+
+\subsection* {Semantics}
+
+\subsubsection* {State Variables}
+
+$s$: seq of (seq of T)\\
+scale: $\mathbb{R}$\\
+nRow: $\mathbb{N}$\\
+nCol: $\mathbb{N}$
+
+\subsubsection* {State Invariant}
+
+None
+
+\subsubsection* {Assumptions}
+
+\begin{itemize}
+\item The Seq2D(T) constructor is called for each object instance before any
+other access routine is called for that object.  The constructor can only be
+called once.
+\item Assume that the input to the constructor is a sequence of rows, where each
+  row is a sequence of elements of type T.  The number of columns (number of
+  elements) in each row is assumed to be equal. That is each row
+  of the grid has the same number of entries.  $s[i][j]$ means the ith row and
+  the jth column.  The 0th row is at the top of the grid and the 0th column
+  is at the leftmost side of the grid.
+\end{itemize}
+
+\subsubsection* {Access Routine Semantics}
+
+Seq2D($S$, scl):
+\begin{itemize}
+\item transition: \wss{Fill in the transition.}  $s, \mbox{scale}, \mbox{nCol}, \mbox{nRow} := S,
+  \mbox{scl}, |S[0]|, |S|$
+\item output: $\mathit{out} := \mathit{self}$
+\item exception: \wss{Fill in the exception.  One should be generated if the
+    scale is less than zero, or the input sequence is empty, or the number of
+    columns is zero in the first row, or the number of columns in any row is
+    different from the number of columns in the first row.} $exc := (\mbox{scale} \leq 0 \lor |S| = 0 \lor |S[0]| = 0 \Rightarrow \mbox{IllegalArgumentException}|\\
+  \lnot\forall(l : \mbox{seq of T}|l \in S : |l| = |S[0]|) \Rightarrow
+  \mbox{IllegalArgumentException})$
+\end{itemize}
+
+\noindent set($p, v$):
+\begin{itemize}
+\item transition: \wss{?} $s[p.r][p.c] := v$
+\item exception: \wss{Generate an exception if the point lies outside of the
+    map.} $exc := (\neg \mbox{validPoint}(p) \Rightarrow \mbox{IndexOutOfBoundsException})$
+\end{itemize}
+
+\noindent get($p$):
+\begin{itemize}
+\item output: \wss{?}$out := s[p.r][p.c]$
+\item exception: \wss{Generate an exception if the point lies outside of the
+    map.}$exc := (\neg \mbox{validPoint}(p) \Rightarrow \mbox{IndexOutOfBoundsException})$
+\end{itemize}
+
+\noindent getNumRow():
+\begin{itemize}
+\item output: $out := \mbox{nRow}$
+\item exception: None
+\end{itemize}
+
+\noindent getNumCol():
+\begin{itemize}
+\item output: $out := \mbox{nCol}$
+\item exception: None
+\end{itemize}
+
+\noindent getScale():
+\begin{itemize}
+\item output: $out := \mbox{scale}$
+\item exception: None
+\end{itemize}
+
+\noindent count($t$: T):
+\begin{itemize}
+\item output: \wss{Count the number of times the value $t$ occurs in the 2D
+    sequence.}$out := +(i, j: \mathbb{N}| \mbox{validRow}(i) \land
+  \mbox{validCol}(j) \wedge s[i][j] = t : 1)$
+\item exception: None
+\end{itemize}
+
+\noindent countRow($t$: T, $i: \mathbb{N}$):
+\begin{itemize}
+\item output: \wss{Count the number of times the value $t$ occurs in row
+    $i$.} $out := +(p: \mbox{PointT} | p \in \mbox{s}[i] \wedge
+  s[p.r][p.c] = t : 1)$
+\item exception: \wss{Generate an exception if the index is not a valid
+    row.} $exc := (\neg\mbox{validRow}(i) \Rightarrow \mbox{IndexOutOfBoundsException})$
+\end{itemize}
+
+\noindent area($t$: T):
+\begin{itemize}
+\item output: \wss{Return the total area in the grid taken up by cell value $t$.
+    The length of each side of each cell in the grid is
+    scale.} $out := +(p: \mbox{PointT} | p \in \mbox{s}[i] \wedge
+  s[p.r][p.c] = t : (p.r \cdot scale) \cdot (p.c \cdot scale))$
+\item exception: None
+\end{itemize}
+
+\subsection*{Local Functions}
+
+\noindent validRow: $\mathbb{N} \rightarrow \mathbb{B}$\\
+\noindent \wss{returns true if the given natural number is a valid row
+  number.}$\mbox{validRow}(i) \equiv 0 \leq i \leq (\mbox{nRow} - 1)$\\
+
+\noindent validCol: $\mathbb{N} \rightarrow \mathbb{B}$\\
+\noindent \wss{returns true if the given natural number is a valid column
+  number.}$\mbox{validCol}(j) \equiv 0 \leq j \leq (\mbox{nCol} - 1)$\\
+
+\noindent validPoint: $\mbox{PointT} \rightarrow \mathbb{B}$\\
+\noindent \wss{Returns true if the given point lies within the boundaries of the
+  map.}$\mbox{validPoint}(p) \equiv \mbox{validRow}(p.r) \wedge \mbox{validCol}(p.c)$\\
+
+\newpage
+
+\section* {LanduseMap Module}
+
+\subsection* {Template Module}
+
+\wss{Instantiate the generic ADT Seq2D(T) with the type LanduseT}\\LanduseMapT is Seq2D(LanduseT)
+
+\newpage
+
+\section* {DEM Module}
+
+\subsection* {Template Module}
+
+DemT is Seq2D($\mathbb{Z}$)
+
+\subsection* {Syntax}
+
+\subsubsection* {Exported Access Programs}
+
+\begin{tabular}{| l | l | l | p{6cm} |}
+\hline
+\textbf{Routine name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions}\\
+\hline
+total & & $\mathbb{Z}$ & \\
+\hline
+max &  & $\mathbb{Z}$ & \\
+\hline
+ascendingRows & & $\mathbb{B}$ & \\
+\hline
+\end{tabular}
+
+\subsection* {Semantics}
+
+\subsubsection* {Access Routine Semantics}
+
+\noindent total():
+\begin{itemize}
+\item output: \wss{Total of all the values in all of the cells.}\\$out := +(i: \mathbb{N}, j : \mathbb{N} \; | \; i \in [0,...nRow-1] \; \land \; j \in [0,...nCol-1] : s[i][j].r)$
+\item exception: None
+\end{itemize}
+
+\noindent max():
+\begin{itemize}
+\item output: \wss{Find the maximum value in the 2d grid of integers}\\$out := +(i: \mathbb{N}, j : \mathbb{N} \; | \thinspace i \in [0,...nRow-1] \land j \in [0,...nCol-1] :$ $(max: \mathbb{N} | \thinspace max < s[i][j] : max := s[i][j])$)
+\item exception: None
+\end{itemize}
+
+\noindent ascendingRows():
+\begin{itemize}
+\item output: \wss{Returns True if the sum of all values in each row increases
+    as the row number increases, otherwise, returns False.} \\$out := (i: \mathbb{N}, j : \mathbb{N} \; | \; i \in [1,...nRow-1] \; \land j \in [1,...nCol-1] :$ $((s[i-1][j] < s[i][j] \rightarrow true) \; | \;(s[i-1][j] > s[i][j] \rightarrow false)$)
+\item exception: None
+\end{itemize}
+
+\subsection*{Local Functions}
+
+\noindent validRow: $\mathbb{N} \rightarrow \mathbb{B}$\\
+\noindent \wss{returns true if the given natural number is a valid row
+  number.}$\mbox{validRow}(i) \equiv 0 \leq i \leq (\mbox{nRow} - 1)$\\
+
+\noindent validCol: $\mathbb{N} \rightarrow \mathbb{B}$\\
+\noindent \wss{returns true if the given natural number is a valid column
+  number.}$\mbox{validCol}(j) \equiv 0 \leq j \leq (\mbox{nCol} - 1)$\\
+
+\newpage
+
+\section*{Critique of Design}
+
+\wss{Write a critique of the interface for the modules in this project.  Is there
+anything missing?  Is there anything you would consider changing?  Why?  One
+thing you could discuss is that the Java implementation, following the notes
+given in the assignment description, will expose the use of ArrayList for Seq2D.
+ How might you change this?  There are repeated local functions in two modules.
+What could you do about this?}\\
+
+The interface overall was designed quite well but there are few things that stood out to me that could be changed. One being that of the get and set methods of the Seq2D. They both seem to doing more than one thing and overlap as doing similar actions throughout the program. For example, get method retrieves the data while the set method also does this with the addition of modifying the data to update it. They're both similar in this sense and for this reason, minimality is violated for this design specification which stood out to me. In addition to this, the Java implementation currently exposes ArrayList for Seq2D class. Generally, Java-v8 interfaces can only have public abstract methods and variables without the capability of using protected or private keywords. This was changed in Java-v9 but we are currently using Java-v8. If this was an interface, we could get around this by creating a class inside the Seq2D class which contains private methods and variables which effectively encapsulates the data and prevents it from being exposed. Essentially we are making the ArrayList private in a way that doesn't impact the rest of the Seq2D class. For the third question asking what to do with repeated local functions, I would just create a separate abstract class that contains these common methods. This new class could then be inherited into the Seq2D class by extending it which allows for easy access to the common previously local methods. Since interfaces and abstract classes are public static, this means we don't need to instantiate them in any way which is why we can easily extend the classes over and access the helper methods inside.
+
+In addition to your critique, please address the following questions:
+
+\begin{enumerate}
+\item The original version of the assignment had an Equality interface defined as for A2, but this idea was dropped.  In the original version, Seq2D inherited the Equality interface.  Although this works in Java with the LanduseMapT, it is problematic for DemT.  Why is it problematic?  (Hint: DEMT is instantiated with the Java type Integer.)
+  
+The reason it is NOT problematic for LanduseMapT is because the LanduseMapT is a generic implementation of SeqT interface which means it can implement the interface without declaring any methods of certain types. So essentially a class that implements the SeqT interface but is empty inside. On the other hand, DEM is instantiated with Integer type meaning it is not generic and uses methods of a certain type from the beginning, instead of adapting dynamically.
+
+
+\item Although Java has several interfaces as part of the standard language,
+  such as the Comparable interface, there is no Equality interface.  Instead
+  equals is provided through inheritance from Object.  Why do you think the
+  Java language designers decided to use inheritance for equality, instead of
+  providing an interface?
+  
+  Equality comparisons are likely to be used throughout various objects in Java programs. By having it built into Java generic class objects, it significantly makes it more efficient and less time consuming as the methods can be inherited from the object rather than implementing the interface each time it is needed. This reduces redundant code and makes the program more essential. In addition, the other components of the class can also be implemented too which is a added bonus to being able to implement the equality method. This is why having equality inherited by an object is more beneficial compared to inheriting from interfaces as it is a task that is likely to occur often.
+  
+  
+\item The qualities of good module interface push the design of the interface in different directions. Why is it rarely possible to achieve a module interface that simultaneously is essential, minimal and general?
+\end{enumerate}
+
+The qualities of a good module interface depends upon the decisions that are needed to benefit the API to do certain tasks. It is sometimes necessary to violate the qualities of good module interface design if it means the API will behave more "nicely" and reduce the hassle when using it. Essentiality is great in removing redundant code and having minimality is also important so that a module doesn't do more than one task that another module might also do. However, sometimes these properties may need to be violated. For example, if a stack needs to have its top element popped off and returned, then it no longer makes sense to have a peak() function to read what the top value is as the pop() function both modifies the stack and returns the popped element. In this case, the interface is no longer minimal as the pop() function modifies the stack and returns the top element which similar to what the peak() function does by reading what the top element is and returning it to the client. The API could be designed to just pop off the top element in the stack and not return the value. If it were designed this way, then yes, it is minimal because each method is doing one specific task without overlapping and doing multiple tasks. It really is up to the developer and their intuition on whether their interface design needs certain qualities as sometimes not having all the qualities can be beneficial in that the API can be easier and less annoying to use.
+
+\end {document}

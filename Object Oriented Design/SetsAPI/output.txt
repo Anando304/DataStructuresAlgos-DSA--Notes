@@ -1,0 +1,40 @@
+
+Entering testGetCount...
+test case 1 passed: true
+test case 2 passed: true
+test case 3 passed: true
+test case 4 passed: true
+
+Entering testUnion...
+test case 1 passed: true
+test case 2 passed: true
+test case 3 passed: true
+
+Entering testToString...
+test case 1 passed: true
+test case 2 passed: true
+
+Entering testProduct...
+test case 1 passed: true
+test case 2 passed: true
+test case 3 passed: true
+
+Entering testIsSubset...
+test case 1 passed: true
+test case 2 passed: true
+test case 3 passed: true
+test case 4 passed: true
+
+Entering testDifference...
+test case 1 passed: true
+test case 2 passed: true
+test case 3 passed: true
+
+Entering testIntersection...
+test case 1 passed: true
+test case 2 passed: true
+test case 3 passed: true
+
+Entering testIsEqual...
+test case 1 passed: true
+test case 2 passed: true

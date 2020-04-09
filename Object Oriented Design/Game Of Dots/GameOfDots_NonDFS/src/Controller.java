@@ -4,8 +4,6 @@
  @date March 25,2020
  @details Used to control/update model(GameBoardT) and view modules
  */
-package src;
-
 import java.util.ArrayList;
 
 /** @brief This class outputs the controller to update model and view
