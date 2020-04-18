@@ -1,0 +1,55 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+\usepackage{stackrel}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+
+
+\textbf{Exercise 3.2.36:} Iterator. Is it possible to write a nonrecursive version of keys() that uses space
+proportional to the tree height (independent of the number of keys in the range)?\\
+
+\textbf{Traversals note:}
+\begin{itemize}
+	\item inorder traveral: Traverse left subtree, root, right subtree
+	\item preorder traversal: visit root, left subtree, right subtree
+	
+	\item postorder traversal: left, right, root
+	
+	\item level-order traversal: all nodes on same level. Used in BFS traversals.
+\end{itemize}
+
+\textbf{Solution:} Yes, it is possible to write a nonrecursive solution. However, this will require a stack.
+
+\be
+	\item Take the root of the tree and all of its left children onto the stack.
+	
+	\item Check is stack empty. If not empty, then pop top element of the stack. Print it, and replace its current position on stack with elements right child.
+	
+	\item Add the right child and all its left children to the stack.
+	
+	\item Repeat steps 2 AND 3 until stack is empty
+	
+	\item Notice how we are pushing all left children to the stack, popping top elements off and then pushing its respective right children nodes onto the stack to replace its current position. This resembles inorder traversal.
+\ee
+
+Summary: For range [lo..hi], simply search for lo and hi in the tree, placing a new pointer to
+the next node in each node of the (two) search paths. Note that you need extra space for
+the pointers at most twice the height of the tree (for marking the two paths). Then do
+an (iterative) inorder traversal of the BST, using the extra pointers to not visit parts of
+it that do not belong to the range.
+
+
+
+\end{document}

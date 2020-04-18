@@ -1,0 +1,27 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+\usepackage{stackrel}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+\textbf{Exercise 4.3.20:} True or false: At any point during the execution of Kruskal’s algorithm, each
+vertex is closer to some vertex in its subtree than to any vertex not in its subtree. Prove
+your answer.\\
+
+\textbf{Solution:}\\
+True, Kruskals algorithm picks edges based on weight. If there is an edge from v to outside its component that is cheaper than the vertex connecting v to its component subtree, then Kruskal's algorithm would choose this assuming it doesn't close the cycle. It wouldn't close the cycle anyways because it's an edge that is outside the component. This means it was not previously seen, thus adding it to the MST would not close the cycle.
+
+
+
+\end{document}

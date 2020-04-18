@@ -1,0 +1,30 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+\usepackage{stackrel}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+\textbf{Exercise 5.3.21 Rabin-Karp Algorithm wildcards:} How would you modify the Rabin-Karp algorithm to search for a given pattern
+with the additional proviso that the middle character is a “wildcard” (any text character at all can match it).\\
+
+\textbf{Solution:} Recall Rabin-Karp algorithm uses modular hashing.
+
+\begin{itemize}
+	\item Since the middle character can be any character, we can skip this character and try comparing with the characters left and right of it.
+	
+	\item Essentially, we could compute text-hashes skipping middle character as that is where the wildcard is.
+	
+	\item The algorithm follows same process as before but just skips the middle characters each time when using the text and pattern comparison.
+\end{itemize}
+\end{document}

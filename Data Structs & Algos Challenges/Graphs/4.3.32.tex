@@ -1,0 +1,39 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+\usepackage{stackrel}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+\textbf{Exercise 4.3.32 Specified Set:} Given a \textbf{connected edge-weighted} graph G \textbf{and} a specified \textbf{set} of
+\textbf{edges S} (having no cycles), describe a way to \textbf{find} a \textbf{minimum-weight spanning tree} of
+G that \textbf{contains all the edges in S}.\\
+
+\textbf{Solution:} We will use a modification of Kruskals algorithm to compute the MST
+
+\begin{itemize}
+	\item Step 1: Sort edges of G by weight in ascending order
+	\item Step 2: Iterate through the sorted edges
+	\item Step 2.1: For each edge seen in the iterator, if it is not contained in the set of edges S, then skip. Remember, we want to add the edges that are only seen in the set of edges S
+	\item Step 2.2: If it is contained in S
+	\item Step 2.2.1: AND if it GENERATES a cycle, then do NOT add this edge to the MST. So just skip
+	\item Step 2.2.2: AND if it DOES NOT GENERATE a cycle, add it to the MST.
+	\item Step 3: Finish iteration for all edges processed.
+	\item Step 4: Return MST
+\end{itemize}
+
+Additionally, we can verify if valid MST using DFS.
+
+
+
+\end{document}

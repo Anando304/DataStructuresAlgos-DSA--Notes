@@ -1,0 +1,43 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+\usepackage{stackrel}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+
+
+\textbf{Exercise 3.5.25:} Registrar scheduling. The registrar at a prominent northeastern University recently
+scheduled an instructor to teach two different classes at the same exact time. Help
+the registrar prevent future mistakes by describing a method to check for such conflicts.
+For simplicity, assume all classes run for 50 minutes starting at 9:00, 10:00, 11:00, 1:00,
+2:00, or 3:00.\\
+
+\textbf{Solution:}\\
+\begin{itemize}
+	\item This definitely sounds like a problem involving hashtable with collisions.
+	
+	\item We could use the method of linear probing as it tries to prevent collisions(in this case, class overlaps) from happening. Also, since the time windows are short, it would not require significant amount of memory.
+	
+	\item We could search using Linear Probing which would require us to check worst case element (N-1) as that is when we would have to check the entire hashtable length for a spot to place an item.
+	
+	\item If a certain class is NOT running meaning the value at a certain key/index of table is null, that means we can schedule the course for that time slot.
+	
+	\item The time slots would be used to map to certain indices of the hashtable.
+	
+	\item We check the time slots if a class exists. If not, then assign the class. This is the process of linear probing.
+\end{itemize}
+
+
+
+\end{document}

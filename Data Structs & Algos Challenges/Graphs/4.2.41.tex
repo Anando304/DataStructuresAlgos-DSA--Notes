@@ -1,0 +1,35 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+\usepackage{stackrel}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+\textbf{Exercise 4.2.41:} Add length directed cycle. Design a linearithmic algorithm to determine whether a digraph has an odd-length directed cycle\\
+
+\textbf{Solution:}
+\begin{itemize}
+	\item Digraph has odd-length cycle iff one or more of its SCC is nonbipartite.
+	
+	\item Recall bipartite is a graph whose vertices can be divided into 2 sets such that all edges connect a vertex in 1 set with a vertex in the other.
+	
+	\item We can run Kosaraju Sharirs SCC algorithm to create a SCC. This algorithm uses DFS once on reverse graph to calculate reverse post-order. It then uses this to determine which nodes to run DFS on for original graph to compute/create the SCC(Strongly connected components).
+	
+	\item If an edge $v \thickspace \rightarrow \thickspace w$ is pointing wrong direction, we can replace it with an odd-length path that is pointing in opposite direction.
+	
+	\item If path has odd length, then we replace edge $v \thickspace \rightarrow \thickspace w$ path. If even-length, then path combined with $v \thickspace \rightarrow \thickspace w$ for odd-cycle formation.
+\end{itemize}
+
+
+
+\end{document}

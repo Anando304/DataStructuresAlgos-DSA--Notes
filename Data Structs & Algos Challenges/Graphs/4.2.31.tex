@@ -1,0 +1,39 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+\usepackage{stackrel}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+\textbf{Exercise 4.2.31:} Describe a linear time algo for computing the strong component containing a given vertex v. On the basis of that algorithm, describe a simple $O(V^2)$ algorithm for computing the strong components of a digraph.\\
+
+\textbf{Solution:}
+\begin{itemize}
+	\item Recall a strongly connected component has a path from $u \thickspace \rightarrow \thickspace v$ and from $v \thickspace \rightarrow \thickspace u$
+	
+	\item We cab use Kosaraju-Shariars algorithm which uses DFS twice to compute the strongly connected components. The running time of DFS is linear at $O(V + E)$ using adjacency list graph. V is the number of vertices and E is the number of edges in the graph.
+	
+	\item Since this algorithm uses DFS twice, it is linear-time complexity.
+\end{itemize}
+
+The steps to do this include:\\
+\be
+	\item Run DFS on reverse Graph to compute reverse post order that will be used in 2nd DFS to compute the SCC(Strongly connected component).
+	\item Run DFS on original graph, considering vertices in order given by reverse post order DFS in step/phase 1.
+\ee
+
+The question also asks to compute $O(V^2)$ complexity solution. To do this, we can use an adjacency matrix instead of adjacency list as finding adjacenct nodes take far longer and more memory. We use the same algorithm as shown above with 2 instances of DFS on the adjacency matrix. This will result in$O(V^2)$\\
+
+
+
+\end{document}

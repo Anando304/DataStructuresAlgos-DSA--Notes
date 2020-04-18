@@ -1,0 +1,27 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+\usepackage{stackrel}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+\textbf{Exercise 5.3.11 Worst-case Boyer-Moore Algorithm:} Construct a worst-case example for the Boyer-Moore implementation in Algorithm
+5.7 (which demonstrates that it is not linear-time).\\
+
+\textbf{Solution:} Recall Boyer-Moore goes from right to left with right side being indices that are multiples of the (length of pattern)-1.\\
+
+Pattern: BAA\\
+Text: AAAAAAAAAA\\
+
+This results in worst-case complexity of $O(N*M)$ where N represents size of text and M represents the size of pattern. If for each index in the text, the entire length of pattern is checked every time, then that results in $O(N*M)$ which gives us Quadratic time complexity. $\sim O(N^2)$
+\end{document}
