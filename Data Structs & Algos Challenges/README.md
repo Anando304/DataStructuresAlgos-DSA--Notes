@@ -3,7 +3,7 @@
 - This repo contains my solutions and attempts at the various Algorithmic problems
 
 # Topics covered:
-- Union-Find/Quick-Union-Find
+- Algorithmic Analysis Fundamentals (Union-find, Quick-Union, Big-O Notation, tilda approximations,etc)
 - Sorting(Elementary sorts, Mergesort, Quicksort, Priority Queues)
 - Searching(BST, Red-black BST, HashTables)
 - Graphs(Undirected, Direct, Minimum Spanning Trees, Shortest Paths)
