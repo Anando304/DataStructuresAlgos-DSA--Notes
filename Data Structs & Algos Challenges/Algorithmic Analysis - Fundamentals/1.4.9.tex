@@ -1,0 +1,30 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+\usepackage{stackrel}
+\begin{document}
+
+
+\textbf{Exercise 1.4.9:} Give a formula to predict the running time of a program for a problem of size N
+when doubling experiments have shown that the doubling factor is 2b and the running
+time for problems of size $N_0$ is T.\\
+
+\textbf{Solution: Example below}: Recall $log_2N$ is usually used anytime when search interval is halving or doubling by 2. If going down by number $n$, then becomes $log_nN$
+\begin{itemize}
+ \item $T(2) \thickspace = \thickspace T(1) \thickspace * \thickspace 2^b$
+ \item $T(4) \thickspace = \thickspace T(2) \thickspace * \thickspace 2^b$
+  \item $T(8) \thickspace = \thickspace T(4) \thickspace * \thickspace 2^b$
+    \item $T(16) \thickspace = \thickspace T(8) \thickspace * \thickspace 2^b$ OR $T(16) \thickspace = \thickspace T(1) \thickspace * \thickspace 2^b \thickspace * \thickspace 2^b \thickspace * \thickspace 2^b \thickspace * \thickspace 2^b \thickspace$
+    \item $T(N) \thickspace = \thickspace T(N/2) \thickspace * \thickspace 2^b$
+ 	\item Therefore,  $T(N) \thickspace = \thickspace T \thickspace * \thickspace 2^{blogN}$
+\end{itemize}
+
+\end{document}

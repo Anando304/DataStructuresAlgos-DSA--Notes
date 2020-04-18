@@ -1,0 +1,21 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+\usepackage{stackrel}
+\begin{document}
+
+
+\textbf{Exercise 1.3.4:} Write a stack client Parentheses that reads in a text stream from standard input
+and uses a stack to determine whether its parentheses are properly balanced. For example,
+your program should print true for [()]{}{[()()]()} and false for [(]).\\
+
+\textbf{Solution:} Use a stack to see if parenthesis properly balanced. Similar to concept of Nondeterministic pushdown automata where you pop off an element from the stack when a match occurs. For example, as you read the string, push the opening brackets onto the stack. If a closing bracket is read, pop the top element off of the stack. If no element exists on the stack yet we are trying to pop off an element, that means the sequence is invalid. Remember, for every opening bracket, there has to be a closing bracket
+\end{document}

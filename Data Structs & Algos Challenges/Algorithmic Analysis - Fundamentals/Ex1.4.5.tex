@@ -1,0 +1,32 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+\usepackage{stackrel}
+\begin{document}
+
+
+1.4.5 Give tilde approximations for the following quantities:\\
+a) N + 1 is equivalent to $\sim N$\\
+b) 1 + 1/N is equivalent to $\sim 1$\\
+c) (1  +  1/N )(1  +  2/N ) is equivalent to $\sim 1$ since 1 is dominant after expansion\\
+d) ($2N^3$) – ($15N^2$) + N is equivalent to $\sim2N^3$, since $N^3$ is dominant\\
+e) $log(2N)/log(N)$\\
+= $\frac{lg(2) + lg(N)}{lg(N)}$\\
+= $\frac{log(2)}{log(N)}$ + $\frac{log(N)}{log(N)}$\\
+= $\sim 1$\\
+f) $\frac{log(N^2+1)}{log(N)}$\\
+= $2 \frac{log(N)}{log(N)}$ //$Used \thickspace Logarithm \thickspace power \thickspace law. \thickspace Ignore \thickspace the \thickspace 1 \thickspace since \thickspace log \thickspace is \thickspace dominant$\\
+= $\sim 2$
+g) $\frac{N^100}{2^N}$\\
+= $\sim 0$ since limit approaches 0
+
+\end{document}
+

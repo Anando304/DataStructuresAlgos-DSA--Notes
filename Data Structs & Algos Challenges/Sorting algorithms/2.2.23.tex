@@ -1,0 +1,23 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+\usepackage{stackrel}
+\begin{document}
+
+
+\textbf{Exercise 2.2.22:} 3-way mergesort. Suppose instead of dividing in half at each step, you divide
+into thirds, sort each third, and combine using a 3-way merge. What is the order of
+growth of the overall running time of this algorithm?\\
+
+\textbf{Solution:}
+Recall that 2-way mergesort is $nlog_2n$ as it halves each recursive call. Therefore, for 3-way mergesort, it is $nlog_3n$ . So uses $log$ base 3 instead of 2.
+
+\end{document}

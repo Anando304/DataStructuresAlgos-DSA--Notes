@@ -1,0 +1,22 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+\usepackage{stackrel}
+\begin{document}
+
+
+\textbf{Exercise 1.3.50:} Fail-fast iterator. Modify the iterator code in Stack to immediately throw a
+j ava.util.ConcurrentModificationException if the client modifies the collection
+(via push() or pop()) during iteration? b).\\
+
+\textbf{Solution:} Create a counter that counts number of $push()$ and $pop()$ operations. Before each call to $hasNext()$ and $next()$. check that this value has not changed since construction of iterator. If it has, that means client modified stack, so throw exception.
+
+\end{document}

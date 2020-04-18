@@ -1,0 +1,35 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+\usepackage{stackrel}
+
+\begin{document}
+
+
+\textbf{Exercise 1.4.18} Local minimum of an array. Write a program that, given an array a[] of N distinct
+integers, finds a local minimum: an index i such that a[i-1] < a[i] < a[i+1].
+Your program should use $\sim2lg N$ compares in the worst case..\\
+
+\textbf{Solution:} Notice it says $2lgN$ worst case. Since it says $lgN$, likely have to use binary search but twice since $2lgN$.
+
+\begin{itemize}
+	\item Examine middle elements
+	\item Compare to neighbours
+	\item If smallest, then it is the local min
+	\item If bigger than LHS, then a local-min exists on LHS
+	\item Same thing if RHS is smaller.
+	\item If reaches element end and nothing else is bigger, then it is least element.
+	\item ie; 0,1,2,3,4,5,3,2,1
+	
+	
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,23 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+\usepackage{stackrel}
+\begin{document}
+
+
+\textbf{Exercise 1.4.16} Closest pair (in one dimension). Write a program that, given an array a[] of N
+double values, finds a closest pair : two values whose difference is no greater than the
+the difference of any other pair (in absolute value). The running time of your program
+should be $linearithmic$ ($NlogN$) in the worst case.\\
+
+\textbf{Solution:} Sort the array you have(fastest sorting algo is linearithmic complexity), so that the consecutive elements can be checked in pairs. Iterate through this loop.If smallest pair found, then keep that distance as smallest pair.
+
+\end{document}

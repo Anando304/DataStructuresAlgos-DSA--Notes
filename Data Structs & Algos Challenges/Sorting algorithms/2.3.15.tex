@@ -1,0 +1,36 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+\usepackage{stackrel}
+\begin{document}
+
+
+\textbf{Exercise 2.3.15: Nuts and bolts}. You have a mixed pile of N nuts and N bolts
+and need to quickly find the corresponding pairs of nuts and bolts. Each nut matches
+exactly one bolt, and each bolt matches exactly one nut. By fitting a nut and bolt together,
+you can see which is bigger, but it is not possible to directly compare two nuts or
+two bolts. Give an efficient method for solving the problem.\\
+
+\textbf{Solution: A variation of QuickSort}
+
+\begin{itemize}
+	\item Use the nuts as pivots for QuickSort method
+	\item Using 1 nut as a pivot at a time, partition the bolts array. We compare each of the bolts with this nut and move them to the LHS and RHS respectively depending on the size.
+	\item After partitioning, the resultant bolts array will have the bolt associated with the pivot nut to be in the correct position.
+	\item Bolts smaller will be to the left of this point while larger bolts will be to the right
+	\item Next, choose the next nut nut which will become the pivot. Keep track of previous nut/bolt pivot pair using a HashMap or dictionary(Python). This is to keep track of matching pairs.
+	\item The new pivot must be compared with the previous pivot bolt to determine to check in the left or right subarrays.
+	\item Once this is determined, repeat the same steps as above until all the nuts and bolts are matched.
+	\item Finally, iterate through the HashMap/dictionary and connect the pairs.
+\end{itemize}
+
+
+\end{document}
