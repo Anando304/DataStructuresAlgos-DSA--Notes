@@ -1,0 +1,37 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+
+\textbf{Exercise 4.2.23:} Strong component. Describe a linear-time algorithm for computing the strong
+connected component containing a given vertex v. On the basis of that algorithm, describe
+a simple quadratic algorithm for computing the strong components of a digraph.\\
+
+\textbf{Solution:}\\
+\begin{itemize}
+	\item Nothing bad happens because we already have a path from 1st DFS to have order or reachability by going as far as we can. This is saved to the stack.
+
+	\item Now working on reverse graph, 2nd DFS just need to check reachability while we run DFS on elements saved on stack in order from stack, so doing BFS on this part is OK.
+	
+	\item However, if we did BFS for the first part, it would not work because BFS can't compute correct far as possible reachability. Only DFS can do that as it recursively goes down as far as possible.
+\end{itemize}
+
+
+	
+
+
+\end{document}

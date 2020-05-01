@@ -1,0 +1,34 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+\textbf{Ex 2.4.2:} Criticize the following idea: To implement find the maximum in constant time,
+why not use a stack or a queue, but keep track of the maximum value inserted so far,
+then return that value for find the maximum?\\
+
+\textbf{Solution:}\\
+
+\begin{itemize}
+	\item Priority Queue acts like a Stack and Queue.
+	\item Keeps track of max element with max element at the top.
+	\item Typically heaps used to make Priority Queues due to fast $nLogN$ complexity of insert/delMax.
+	\item For stacks and queues, we have to go through elements linearly to promote to 'max', so cannot be done in constant time.
+	\item Similar to why insert and delMax are not always good complexities depending on sorted or unsorted arrays.
+	
+\end{itemize}
+
+\end{document}

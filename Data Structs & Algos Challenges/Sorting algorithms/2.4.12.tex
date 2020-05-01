@@ -1,0 +1,28 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+\textbf{Ex 2.4.12:} Suppose that your application will have a huge number of find the maximum
+operations, but a relatively small number of insert and remove the maximum operations.
+Which priority-queue implementation do you think would be most effective: heap,
+unordered array, or ordered array?\\
+	
+\textbf{Solution:}\\
+Heap is good for avg case for large number of $find\_max$ with relatively small number of $insert()$ and $Del\_max()$ operations.If you have a large number of $del\_max$ ops, then best to use ordered array due to $O(1)$ complexity. If few deletions but more insertions, then an unordered array would be best.
+
+
+\end{document}

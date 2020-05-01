@@ -1,0 +1,29 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+
+\textbf{Exercise 4.3.1:} Prove that you can rescale the weights by adding a positive constant to all of
+them or by multiplying them all by a positive constant without affecting the MST.\\
+
+\textbf{Solution:}\\
+Multiplying by a constant will maintain relative order of weights of edges. Thus MST will take same path. Suppose using Kruskall's MST algo. It sorts weight based on relative weights of edges. If relative weight maintained, then the algo compute same path as before by multiplying by the constant. So nothing bad happens.
+
+	
+
+
+\end{document}

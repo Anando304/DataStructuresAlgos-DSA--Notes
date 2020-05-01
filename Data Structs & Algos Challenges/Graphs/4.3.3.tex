@@ -1,0 +1,34 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+
+\textbf{Exercise 4.3.3:} Show that if a graph’s edges all have distinct weights, the MST is unique\\
+
+\textbf{Solution:}\\
+Use Kruskall's algo which is proven to be correct. At each step, pick 1 edge $V-1$ times, so $V-1$ edges. $Let \thickspace E=V-1$. That means at each candidate set, if we pick any edge, then it does not cause a cycle.\\
+
+If order is distinct, then each one of the edges come first as only 1 step to make at each step.\\
+
+That means when finish Kruskalls, we get unique path.\\
+
+By sorting edges and picking edges that connect prev unconnected component, lack of equal weights means that there is only ever one option for connecting the weight for each time to pick an edge. Therefore, only one MST can be built from graph and its unique.
+
+	
+
+
+\end{document}

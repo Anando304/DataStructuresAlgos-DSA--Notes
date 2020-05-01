@@ -1,0 +1,26 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+\textbf{Ex 2.3.8:} About how many compares will Quick.sort() make when sorting an array of
+N items that are all equal?\\
+
+\textbf{Solution:}\\
+Probably $(n-1)$ compares. The problem given represents one of the worst case comparisons for Quicksort as it has to check each element over and over again in partition steps. So takes $O(n^2)$ comparisons. Since no value smaller or larger, it keeps moving pivots to ends and doing $n \thickspace *\thickspace n$ compares.
+A good solution to this would be to use 3-way partitioning where we have elements less the left, larger to the right, and equal in the middle.
+
+\end{document}

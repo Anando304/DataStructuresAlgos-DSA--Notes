@@ -1,0 +1,27 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+\textbf{Ex 2.3.20: Nonrecursive quicksort}\\ Implement a nonrecursive version of quicksort based
+on a main loop where a subarray is popped from a stack to be partitioned, and the resulting
+subarrays are pushed onto the stack. Note : Push the larger of the subarrays onto
+the stack first, which guarantees that the stack will have at most lg N entries.\\
+	
+\textbf{Solution:}
+The stack is used to keep track of the 'partition parts' along the path of execution, so its size corresponds to the recursive depth. Since we store atleast half(ie; the larger of the subarrays) of remaining elements of stack every time, this number is halved with every partition which results in a depth of at most $logN$.
+
+\end{document}

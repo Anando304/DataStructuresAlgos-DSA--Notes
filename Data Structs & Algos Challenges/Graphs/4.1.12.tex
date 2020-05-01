@@ -1,0 +1,34 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+
+\textbf{Exercise 4.1.12:}: What does the BFS tree tell us about the
+distance from v to w when neither is at the root?\\
+
+\textbf{Solution:}
+\begin{itemize}
+	\item If diff branch, then add up their path distance of both sides.
+	\item If same branch, then just add it up.
+	\item Remember, BFS does not necessarily give us least distance.
+\end{itemize}
+
+
+	
+
+
+\end{document}

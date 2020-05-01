@@ -1,0 +1,31 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+
+\textbf{Exercise 4.1.14:}: Suppose you use a stack instead of a queue
+when running breadth-first search. Does it still
+compute shortest paths?\\
+
+\textbf{Solution:}\\
+No, because we have need to remove root node which we can't do for a stack as it would require us to remove all of the nodes above that on the stack first in order to access root node to remove.
+
+
+	
+
+
+\end{document}

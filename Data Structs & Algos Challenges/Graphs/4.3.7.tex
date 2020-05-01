@@ -1,0 +1,36 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+
+\textbf{Exercise 4.3.7:} How would you find a maximum spanning tree of an edge-weighted graph?\\
+
+\textbf{Solution:} Here are some options...
+\begin{itemize}
+	\item We could negate all edges then run MST
+	\item Find max edge between all subsets.
+	\item Reverse sort for Kruskalls(since Kruskalls normally sorts edges in ascending order of weight) for edges first and then pick edges that way.
+
+
+\end{itemize}
+
+
+
+	
+
+
+\end{document}

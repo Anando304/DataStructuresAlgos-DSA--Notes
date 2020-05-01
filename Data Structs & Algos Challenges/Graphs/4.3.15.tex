@@ -1,0 +1,29 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+
+\textbf{Exercise 4.3.15:} Given an MST for an edge-weighted graph G and a new edge e, describe how to
+find an MST of the new graph in time proportional to V\\
+
+\textbf{Solution:} We add edge to graph and MST and causes a cycle. We can detect cycle using BFS\_cycle. This can detect all edges and nodes. Now find new max edge and remove it. Removing this won't break MST because MST previously before adding edge, was already minimum. So removing max edge maintains MST. MST only gets disconnected when removing edges in middle of MST. MAX edges are typically at the edges so removing those still keeps the MST intact.
+
+
+	
+
+
+\end{document}

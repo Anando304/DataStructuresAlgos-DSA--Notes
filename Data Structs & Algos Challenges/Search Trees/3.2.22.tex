@@ -1,0 +1,27 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+\textbf{Ex 3.2.22:} Prove that if a node in a BST has two children, its successor has no left child and
+its predecessor has no right child.\\
+	
+\textbf{Solution:}\\
+For any node, its successor will be leftmost element of its right child. Therefore, this node cannot have a left-child as that is the leftmost-element of its right child.\\
+
+For any node, predecessor will be rightmost element of its left child.
+
+\end{document}

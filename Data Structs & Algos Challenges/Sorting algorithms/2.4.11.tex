@@ -1,0 +1,31 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+\textbf{Ex 2.4.11:} Suppose that your application will have a huge number of insert operations, but
+only a few remove the maximum operations. Which priority-queue implementation do
+you think would be most effective: heap, unordered array, or ordered array?\\
+	
+\textbf{Solution:}\\
+Unordered array would be a better priority-queue with less cost for insert as we can insert it without carrying about order. If $Del\_max$ used a few times, then unorder is ideal since its great for fast insertions because it no longer matters where it is inserted. Ordered array would be ideal if $Del\_max()$ is done often as it makes removing the max element easy since array already in sorted order.\\
+
+Ordered arrays have $O(N)$ insert with $O(1)$ $Del\_max$.\\
+Unordered arrays have $O(1)$ insert with $O(N) \thickspace Del\_max$.\\
+Binary Heaps have $O(logN)$ insert with $O(LogN) \thickspace Del\_max$ operations due to $Log N$ height of tree.\\
+
+
+\end{document}

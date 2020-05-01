@@ -1,0 +1,29 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+\textbf{Ex 2.2.7:} Show that the number of compares used by mergesort is monotonically increasing
+$(C(N+1) > C(N) \thickspace for \thickspace all \thickspace N > 0)$.\\
+
+\textbf{Solution:}\\
+\begin{itemize}
+	\item $C(N)= \thickspace C(\frac{n}{2}) \thickspace + \thickspace C(\frac{n}{2}) \thickspace + \thickspace n$
+	\item $\equiv \thickspace C(n) \thickspace nlogn$
+	\item $2^k \thickspace < n \thickspace \thickspace 2^{kN}$, therefore, monotocitically increasing.
+\end{itemize}
+
+\end{document}

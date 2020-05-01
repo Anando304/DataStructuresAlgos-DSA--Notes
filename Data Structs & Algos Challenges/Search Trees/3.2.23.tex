@@ -1,0 +1,33 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+\textbf{Ex 3.2.23:} Is delete() commutative? (Does deleting x, then y give the same result as deleting
+y, then x?)\\
+	
+\textbf{Solution:}
+Yes, it is commutative because order matters. There's three cases for deletion.
+
+\begin{itemize}
+	\item Deletion of leaf node. Just remove the node
+	\item Deletion of a node with 1 child node. To do this, delete the node and then just bubble up its child node to take place of the parent that was deleted.
+	\item Deletion of node with 2 children. For this, there are a few ways to do it such as finding the least element of the right subtree and then swap with the node to delete. Delete this node and then move its children up the tree.
+	
+	\item Another method is to use Hibbard deletion. It is used for deleting a node with 2 child nodes. Its works by finding the successor of an element to delete and swapping the positions of the successor and the original. Remove that element, and then push its children up the tree.
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,28 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+\textbf{Ex 2.4.14:} What is the minimum number of items that must be exchanged during a remove
+the maximum operation in a heap of size N with no duplicate keys? Give a heap
+of size 15 for which the minimum is achieved. Answer the same questions for two and
+three successive remove the maximum operations.\\
+	
+\textbf{Solution:}\\
+We can put numbers in a way that we get 2 as number of m in swaps. Worst case is $logN$ where we would have to check at each level if parent and any of its children have to be swapped. Best case is 2 swaps.
+
+
+\end{document}

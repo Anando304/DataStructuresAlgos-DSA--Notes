@@ -1,0 +1,38 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+
+\textbf{Exercise 4.4.35:}  Bitonic shortest path. Given a digraph, find a bitonic shortest path from s to every
+other vertex (if one exists). A path is bitonic if there is an intermediate vertex v such
+that the edges on the path from s to v are strictly increasing and the edges on the path
+from v to t are strictly decreasing. The path should be simple (no repeated vertices).\\
+
+\textbf{Solution:}
+
+\begin{itemize}
+	\item Run ascending monotonic (ie; $1\_2\_3\_4$).
+	\item Descending monotonic.
+	\item Take best combination.
+	\item Check if it's also shortest path.
+\end{itemize}
+
+
+	
+
+
+\end{document}

@@ -1,0 +1,31 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+
+\textbf{Exercise 4.4.16:} Suppose that we convert an EdgeWeightedGraph into an EdgeWeightedDigraph
+by creating two DirectedEdge objects in the EdgeWeightedDigraph (one in each direction)
+for each Edge in the EdgeWeightedGraph and then use the Bellman-Ford algorithm. Explain why this approach
+fails spectacularly.\\
+
+\textbf{Solution:} This approach only works if all edges have positive weights and no negative cycles. Bellmanford algo fails on neg weight cycles and Dijkstras algo works only with positive weighted edges.
+
+
+	
+
+
+\end{document}

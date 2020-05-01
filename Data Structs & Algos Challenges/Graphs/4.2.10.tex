@@ -1,0 +1,43 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+
+\textbf{Exercise 4.2.10:}: What is the maximum number of edges in a digraph with V vertices and no parallel
+edges? What is the minimum number of edges in a digraph with V vertices, none of
+which are isolated?\\
+
+\textbf{Solution:}\\
+Yes, reverse Post-Order DAG(Topological Sort). Basically DFS but push output onto stack instead of print.
+
+\begin{itemize}
+	\item There are 3 cases, Proposition F:
+	\item dfs(w) has already been called and has returned (w is marked).
+	\item dfs(w) has not yet been called (w is unmarked), so $v\rightarrow w$ will cause dfs(w) to
+be called (and return), either directly or indirectly, before dfs(v) returns.
+	\item dfs(w) has been called and has not yet returned when dfs(v) is called. The
+key to the proof is that this case is impossible in a DAG, because the recursive
+call chain implies a path from w to v and $v \rightarrow w$ would complete a directed
+cycle.
+\end{itemize}
+
+The third case has a cycle becayse we see dfs(w) but has not yet been returned, meaning w is still in queue/stack as it was not yet popped/marked, meaning a cycle can occur as not put in marked list yet.
+
+	
+
+
+\end{document}

@@ -1,0 +1,35 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+
+\textbf{Exercise 4.4.22 Vertex weights:}  Show that shortest-paths computations in edge-weighted digraphs
+with nonnegative weights on vertices (where the weight of a path is defined to
+be the sum of the weights of the vertices) can be handled by building an edge-weighted
+digraph that has weights on only the edges.\\
+
+\textbf{Solution:} So the question is basically trying to run Dijkstra's algo using vertex weights instead of edge weights similar to our SafeWayz street crime project. So create an edge as sum of two vertex weights.\\
+
+$w'(u,v)=w(u,v) \thickspace + \thickspace vertexWeight(v)$
+
+Two nodes, u and v gives weight u to v which is prev weight plus weight at target node. We can ignore the source because it is the common point for all paths. So it acts like a constant and doesn't impact overall sort.
+
+
+	
+
+
+\end{document}

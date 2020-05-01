@@ -1,0 +1,31 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+\textbf{Ex 2.2.8:} Suppose that Algorithm 2.4 is modified to skip the call on merge() whenever
+$a[mid] \le a[mid+1]$. Prove that the number of compares used to $mergesort$ a $sorted$
+$array$ is $linear$.\\
+
+\textbf{Solution:}\\
+\begin{itemize}
+	\item Since array is sorted, therefore it already satisfies $a[mid] \le a[mid + 1]$.
+	\item  $C(N)= \thickspace C(\frac{n}{2}) \thickspace + \thickspace C(\frac{n}{2}) \thickspace + \thickspace 1$. Notice how compared to Ex 2.2.7, the equation changed from $n$ to constant $1$. This is because we only do 1 comparison.
+	\item $T(n) \thickspace = \thickspace 2T(\frac{n}{2}) + 1$
+	\item $T(1) = 1$
+	\item $T(n) = n$
+\end{itemize}
+\end{document}

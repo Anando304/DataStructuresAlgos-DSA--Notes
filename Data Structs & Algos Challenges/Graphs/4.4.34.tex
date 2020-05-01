@@ -1,0 +1,38 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+
+\textbf{Exercise 4.4.34:}  Monotonic shortest path. Given a weighted digraph, find a monotonic shortest
+path from s to every other vertex. A path is monotonic if the weight of every edge on
+the path is either strictly increasing or strictly decreasing. The path should be simple
+(no repeated vertices). Hint : Relax edges in ascending order and find a best path; then
+relax edges in descending order and find a best path.\\
+
+\textbf{Solution:}
+
+\begin{itemize}
+	\item Relax edges in ascending order in terms of weights.
+	\item Dijkstras did this using greedy choice of relaxing edges in ascending order of weight.
+	\item Find best among the monotonic paths by relax in ascending order or descending order. Just pick one method and find best
+\end{itemize}
+
+
+	
+
+
+\end{document}

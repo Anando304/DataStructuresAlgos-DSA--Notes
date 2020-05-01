@@ -1,0 +1,28 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+\textbf{Ex 2.1.14:} Dequeue sort. Explain how you would sort a deck of cards, with the restriction
+that the only allowed operations are to look at the values of the top two cards, to
+exchange the top two cards, and to move the top card to the bottom of the deck.\\
+	
+\textbf{Solution:}
+Initially, the deck will have 2 parts. A sorted bottom (initially empty) and unsorted top. We always keep track of smaller of the top 2 cards until 2nd card from top is in beginning of sorted part.
+
+Then, top card is in its place! Move sorted part from top to bottom of the deck(repeated exchanges) and repeat. The whole process is essentially a simulation of selection sort using the deck operations we are given. As you move the smaller of the top element down, we continue the comparison with the remaining cards with the previous larger element. We do the same process and find the new minimum and maximum between the two new top cards and bring the smaller one down. We continue this until the cards are sorted(which is when we see the first original minimum card).
+
+\end{document}

@@ -1,0 +1,27 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+\textbf{Ex 2.3.5:} Give a code fragment that sorts an array that is known to consist of items having
+just two distinct keys. ie; array consisting of 0's and 1's only.\\
+
+\textbf{Solution:}\\
+\begin{itemize}
+	\item Partition the array so that smaller than 1 on the left while on the right is 1's. So essentially use one of the 1's as the pivot.
+	\item Method 2: Count number of 0's and 1's and insert into an array OR pop ech 0 and 1 into seperate arrays, then merge them together. This isn't using the quicksort idea however whereas previous method does.
+\end{itemize}
+\end{document}

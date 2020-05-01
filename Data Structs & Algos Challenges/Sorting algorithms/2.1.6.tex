@@ -1,0 +1,25 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+\textbf{Ex 2.1.6:} Which method runs faster for an array with all keys identical, selection sort or
+insertion sort?\\
+	
+\textbf{Solution:}
+Insertion sort is faster. This is because if all keys are equal, then insertion sort only needs to do 1 compare for each pair, and no exchanges. This means that there is $O(N)$ comparisons and no exhanges in total. However if selection sort was used, it would require 2 for loops and check each element regardless if if all sorted(since all identical elements, already sorted). SelectionSort does not care about how the array is formatted, it will always result in $O(N^2)$ comparisons even if list is sorted with same elements.
+
+\end{document}
