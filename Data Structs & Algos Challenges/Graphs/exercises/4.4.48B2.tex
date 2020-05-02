@@ -1,0 +1,30 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+By Anando Zaman
+
+
+\textbf{Exercise Bonus2:} Consider an algo for MST that looks similar to Kruskals for computing a MST. At every iteration, you find smallest edge that connects it to a different component with no cycle. You do this for all local components until form a MST.\
+
+\textbf{Solution:}\\
+This seems as though it is picking the smallest local edge at each level/component which is somewhat similar to Prim's algorithm. This will result in the MST to be formed as it still  takes the greedy approach to choose the least weighted edge that is available at each local instance/component without creating a cycle. If this continues for all edges, eventually we will form an MST.
+
+	
+
+
+\end{document}

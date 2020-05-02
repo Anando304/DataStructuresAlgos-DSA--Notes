@@ -1,0 +1,30 @@
+\documentclass[11pt,fleqn]{article}
+
+\setlength {\topmargin} {-.15in}
+\setlength {\textheight} {8.6in}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows}
+\usepackage{diagbox}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+By Anando Zaman
+
+
+\textbf{Exercise Bonus:} Suppose that you are given a connected edge-weighted undirected graph G=($V,E$) such that its 10 heaviest edges do not contain a cycle. Give an efficient algo for computing a min-weight spanning tree of G that contains 10 heaviest edges.\\
+
+\textbf{Solution:}\\
+We can create a minimum spanning tree using Kruskals algorithm. We first sort the edges in G by weight and iterate through the edges. While iterating, we check if the edge is contained in the set of heaviest edges and does not create a cycle. If this is true, we add this to the MST. Otherwise, we skip this step and check the next edge. We continue this process until all edges are processed. We then return the MST created.
+
+	
+
+
+\end{document}

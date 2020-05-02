@@ -15,6 +15,9 @@
 \newcommand{\ee}{\end{enumerate}}
 
 \begin{document}
+By Anando Zaman
+
+
 \textbf{Exercise 4.4.47 Bellman-Ford negative cycle detection:} Show that if any edge is relaxed during the Vth pass of the generic Bellman-Ford algorithm, the edgeTo[] array a directed cycle and any such cycle is a negative cycle\\
 
 \textbf{Solution:} Recall Bellman-Ford algorithm discovers shortest path trees layer by layer, adding the edges to the shortest path. The algorithm relaxes each edge only once and DOES NOT re-relax edges. If it does, then a negative cycle occurred. This algorithm can handle both positive and negative edges along with undirected/directed graphs. However, it FAILS when NEGATIVE CYCLES are involved.
