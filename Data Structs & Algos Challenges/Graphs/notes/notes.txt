@@ -1,0 +1,157 @@
+Brief Notes:
+
+Hamiltonian cycle: Each vertex must be visited atmost once
+
+Euler cycle: visit every edge atleast once. 
+	->Can visit each vertex more than once.
+
+Graph Isomorphism: Do 2 adjacency lists represent same graph?
+
+Planarity: Can graph be drawin in plane with no crossing edges?
+
+Biconnectivity: Is there a vertex whose removal disconnects the graph?
+
+Adjacency Matrix:
+	-> Find valid edge in O(1), just check if pair exists.
+	-> Finding adjacent nodes(all of them) will take linear time(O(N))
+	-> Wasteful interms of memory.
+
+Adjacency List(More Dynamic):
+	-> Tells who the adjacent nodes are in the form of
+	   a linkedlist. Have to traverse linkedlist to find if neighbour
+	   exists. Takes optimal O(1) time to add edge.
+	->Worst case is n(total number of nodes) which is if a node is
+	  connected to all nodes as adjacent nodes. So have to check n-nodes
+	  worst case.
+
+Degree: Number of edges connected to a node
+
+Topological order: set of tasks to be completed with prescedence constraints
+		   in which order we should schedule tasks.
+		   -> There must be a source(node with only outgoing edges)
+		      and sink(node with only incoming edges)
+		   -> We can use DFS to verify TO. If we traverse back from sink
+		      and see if source exists.
+		   -> Contains no directed cycles. it is a DAG.
+
+Strongly Connected Components(SCC): exists both a directed path from (v to w) & (w to v).
+
+SCC can be computed using Kosarju-Sharir Algorithm:
+
+**Kosarju-Sharir Algorithm Intuition**:
+	-> Reverse post order(One DFS to do this)
+	-> Use DFS on the sequence from reverse post-order to
+	   compute SCC.
+	-> So does DFS twice.
+
+	Phase 1: Compute rev post or in Graph-reverse.
+	Phase 2: Run DFS on original Graph, visit marked nodes.
+
+
+**Greedy MST & Minimum Spanning Trees(MST)**:
+	MST:
+	-Connected
+	-Acyclic
+	-includes all vertices
+
+	PRIMS ALGO(Undirected graph):
+	-Start with source vertex and greedily grow tree T
+	 by picking the cheapest(optimal path) at each local
+	 component.
+	-Repeat until V-1 edges are seen. Do NOT save edges that
+	 create cycles.
+	- So takes node cheapest to current local point while
+	  Dijkstra's does it for the source for both directed &
+	  undirected graphs.
+
+	-Pick new cheapest edge for corressponding successor nodes
+	 but don't include prev edge already seen.
+	- Use a Binary Heap data structure for fast delMin of red edges
+	  and fast insert for new red edges.
+	- MinSpan Tree has (n-1) edges.
+
+
+	KRUSKAL's ALGO(Cycle thrower away):
+	-> First, sorts edges in ascending order of weight (nlogn).
+	-> Add next cheapest edge to tree T unless doing so creates a cycle.
+	-> creating an edge results in (m-1) edge each time.
+	-> This means number of components decrease by 1 each time.
+	-> By the end, we will be left with one large compoenent.
+	-> Worst case complexity is O(E log E) where E represents number of edges.
+	-> Only accesses edge weights via pairwise comparisons.
+
+	DIJKSTRA'S ALGO:
+	-> Only works for positive edge weights!
+	-> Consider vertices in INCREASING ORDER of distance from source.
+	-> Set all distTo[V] to infinity so that we can find cheap path to
+	   replace them.
+	-> Initially, set source vertex to 0.0 distance and push to the MinPQ.
+	-> Find the adjacent edges and relax them pointing out from that vertex.
+	-> Then pick next closest vertex according to distTo[].
+	-> By relax edges, find previous shortest path to a given node
+	   and see if current node makes new shortest path.
+	-> If makes new shortest path, then update with new
+	   one found and insert into the MinPQ(Minimum Priority Queue).
+	-> Repeat above steps for next shortest edge by extracting minimum edge from PQ
+	-> Dijkstra's algo works for both directed/undirected graphs but MUST have positive
+	   edge weights!
+	-> Typically MinPQ implemented using a Heap due to fast(O(logN)) complexity for insert
+	   and delete operations.
+	-> Doing these heap operations for each edge E or equivalent to (V-1) edges where V
+	   represents number of vertices, results in O(E log V) time complexity.
+
+
+	BELLMANFORD ALGORITHM:
+	-> Is a generic implementation of greedy algorithm
+	-> Very similar to Dijkstra's but discovers tree, edge by edge.
+	-> So it relaxes edges like crazy as it is done on each layer/level over
+	   and over again.
+	-> If we sweep through the whole graph and do m-relaxations(relax every edge),
+	   shortest path edge out of source(s) will freeze(NOT CHANGE since already relaxed)
+	   and fix their edges. This means it will figure out corressponding edges coming out of
+	   source(s).
+	-> So we do this for every other edge for next node on SPT(shortest path tree).
+	-> We discover one more layer of SPT from source(s).
+	-> So in this case, found shortest path from edge and node for 2nd node.
+	-> So we keep doing this idea of sweeping the graph for each layer.
+	-> Worst case is n-layers where n is the number of nodes. So if we run (n-1) sweeps,
+	   then we get running time of O(n * m) where m is number of edges.
+	-> logN height.
+	-> m could be very dense so could result in ~ O(N^3) complexity.
+	-> So people try to avoid this by modifying the graph and removing negative weights
+	   inorder to get Dijkstra's algo to work for linearithmic runtime.
+
+	-> SUMMARY BELLMANFORD:
+		-> Discovers SPT layer by layer adding edges to SPT using (n-1) sweeps. Worst
+		   case is O(N^3).
+		-> Can help to discover negative cycles as we will get stuck in a loop
+		   trying to update edges that were already seen due to negative cycles.
+		-> Works for both positive and negative weights, NOT NEGATIVE CYCLES.
+
+
+	BFS(Breath-first search):
+		-> Level-order traversal using a Queue.
+		-> push source to queue.
+		-> Dequeue vertex and then find adjacent vertices connected to it.
+		-> mark these vertices as 'seen'.
+		-> Push these vertices onto the Queue.
+		-> Dequeue next vertex and find adjacent vertices of that.
+		-> If not marked/seen, then push the vertex onto the Queue.
+		-> Continue these last 2 steps until Queue is empty.
+		-> Once empty, you'll have an array or HashSet to backtrack from
+		   end/destination node back to your root/source node to form a path.
+		-> Time complexity --> O(E + V) where E is the number of edges and V
+		   is the number of vertices. Linear time just like DFS.
+		-> BFS has the added benefit of finding nodes closer to the source quicker
+		   since it does Level-order traversal.
+
+
+
+	DFS(Depth-first search):
+		-> Uses Stack and Recursion.
+		-> Recursively visit all unmarked virtices w adjacent to v.
+		-> Marks all verteices connected to source(s) in time proportional
+		   to sum of their degrees. O(E + V).
+		-> Each vertex connected to source(s) is visited only once due to marked[] array.
+		->After DFS found path, we can find vertices connected to source(s) in O(1) and
+		  find path to s in O(N) length. EdgeTo stack can keep track of path	

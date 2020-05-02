@@ -1,0 +1,69 @@
+Just some brief notes:
+
+Binary Search Trees:
+Simple data structure that uses linkedlists.
+Deletion occurs in three cases.
+Case 1: deleting a leaf node. Just remove it.
+Case 2: Deleting a node with a single child. 
+- Just promote the child node to replace the parent
+Case 3: Delete a node with 2 child nodes.
+- Use Hibbard deletion algorithm.
+- Find the successor of the node(left-most element of right subtree).
+- Replace the node to delete with the value of the successor.
+- Delete the old successor value.
+
+Balanced BST:
+* 2-3 trees
+- Allows 1 or 2 keys per node.
+	- 2-node: one key and 2 children
+	- 3-node: 2 keys and 3 children(left middleright)
+		-> left has ites less than first key
+		-> middle has values between 1st and 2nd key
+		-> right has values greater than 2nd key
+*Red Black BST
+-> Represents 2-3 Tree as BST
+-> Use 'internal' left-leaning links as 'glue' for 3-nodes
+-> Red lines represent 3-node while black is 2-node.
+
+We commonly do left-leaning red black trees(LLRB) to keep it balanced.
+All red links are put on the left.
+Maintain symmetric order.
+Perfect black balance.
+We do a series of left or right rotations to get where we need to be.
+This was done in some of the exercises.
+Flipping a color from red to black doesn't change the number of black legs.
+However, if it was with root of the tree, then it does affect it. Otherwise not.
+
+********HashTables:**********
+How do we pick size of table and pick hash function?
+What do we do about collisons?
+	-> Deal with collisions after.
+	-> Do not allow any collisions at all!
+
+-> Uniform Hashing Assumption: each key is equally likely to hash to an
+			       intersection between 0 & M-1
+Load function is the number of items(N) for a given number of spaces(M). 
+Represented as N/M. 
+
+If we let collisions happen and deal with them after, it is known as
+'seperate chaining'. Seperate chaining allows collisions to happen by
+placing the collided elements in the same cell in the form of a linked list.
+This results in worst case time of finding an item to be O(N) where N is the
+length of the largest linkedlist at a particular cell. This is because we have
+to iterate through the entire list to find the item we are looking for. Can be time
+consuming but is much more space efficient than something like linear probing
+explained below.
+
+Linear Probing: is the process of picking the next available spot to place our item
+when we see a particular spot os full. If we have n elements and putting into array
+of size M, M > N. M cant be equal to N because then no empty space to put new elements!
+Seperate chaining from before is useful if not trying to waste extra memory. Linear Probing
+allocates larger amount of memory to avoid collisions. Only good if we have large number
+of items.
+
+Worst case for linear probing is if we have to search from beginning to end for all n-elements.
+Sp (n-1).
+
+However if uniform hash assumption is valid for a given problem, then we have equal
+probability of placing an element/item in each space shown as N/M ~ O(1) avg for insert and search.
+

@@ -1,0 +1,69 @@
+Brief Notes:
+
+Stable algorithms: Stability of an algorithm is how ordered the arrays/lists
+are. A sorting algorithm is said to be stable if two objects with equal keys
+appear in the same order in sorted output as they appear in the input array to be sorted.
+
+In general, selection sort is costly on compares as it'll compare everything
+regardless on whether it is in some particular sorted order. However, exchanges
+are O(N), which is relatively cheap for size N.
+
+Insertion sort is great depending on the order of the keys/elements. Worst case is
+when the order is completely inverted such as the array being in descending order.
+This requires O[(n^2)/2] comparisons in reverse order while it takes
+(N-1) comparisons in already sorted order(since just has to scan through without any swaps.
+Insertion sort takes an element and compares it with the elements before it(already sorted)
+to see where it would be correctly placed.
+
+InsertionSort is great for arrays with little variance such as few points out of
+order(partially sorted). Touches about half the number if compares as SelectionSort.
+
+QuickSort:
+-Has worst case if array already sorted/reverse sorted, OR if all elements
+are the same and repeated many times.
+-Best case is when recursive steps can divide exactly in half(pivot in middle each time).
+
+-Adverser knows the algorithm, so they can pick input that is worse.
+- If we shuffle it and make it random, adversary can no longer pick an input to
+trigger worst case for our algo.
+- So the 'expected worst and avg case' is nlogn due to randomness.
+- If shuffling did not occur, then actual worst case is O(n^2).
+- Note, that when we talk about 'expected worst case', it should not be
+confused with actual worst case of O(n^2) as there is still a possibility of 
+appearing as O(n^2) after shuffling(ie; if all elements are the same).
+
+MergeSort vs QuickSort:
+-MergeSort is great but missing 'in-place' sorting. It is very stable.
+-Quicksort is less stable but the avg and best case happens more often.
+So QuickSort is often chosen instead.
+- HeapSort is also great with worst case time complexity of O(nlogn)
+
+-Priority Queues:
+	->unsorted arrays(fast insert (O(1)), slow delMax (O(N)))
+	->sorted arrays(slow insert(O(N)), fast delMax(O(1)))
+	-> Binary Heaps (fast insert and delMax, (O(lgN)) for both).
+	
+
+-A binary heap is a collection of keys arranged in complete 'heap-order' BinTree,
+represented in level order in an array.(NOT USING FIRST ELEMENT).
+-It has its max element at the top. 
+-Every node is larger than both its child nodes.
+- For n-nodes in the tree, there is a height of log(n). 
+- To move up(swim) the tree from current node to parent node,
+do k/2 as height goes by base 2.
+- If at current node and want to go down(sink) the tree to child nodes,
+do 2k and (2*k)+1.
+- Let k represent the index of the array for a given node
+
+Heapify:
+	(Swim or Bottom-up)
+	->If node[key] > node_parent[key], this violates max_heap.
+	->So we exchage the nodes going up the tree until becomes stable.
+	->So go up each parent node(k/2)
+
+
+	(Sink or Top-down)
+	->if node[key] < node_child[key], this again violates max_heap.
+	->So we exchange the nodes going down the tree until stable.
+	->Recall children are at positions 2*k & (2*k)+1 in array.
+
