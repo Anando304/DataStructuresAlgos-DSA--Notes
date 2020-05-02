@@ -1,0 +1,121 @@
+Anando Zaman
+Just some brief notes for String Algorithms:
+- Red-black BST and hashtables have great search,insert and delete ops
+  normally with O(logN) and O(1) respectfully.
+- However, if we do this for strings, we have to check for entire input-alphabet
+  of the string(ie; a,b,c,d,e...z) for each character in the string of length w.
+
+- Let N represent the number of strings
+- Let W represent the length of the string
+- Let R represent the Radix or input alphabet of possible characters to pick(ie;a,b,c,d,...z)
+
+- In red-black trees, we have to look at entire string for search hit which means
+  check every character. This results in (logN)^2 because logN comparisons for logN chars
+
+******R-way TRIES***********
+-> Stores chars in nodes
+-> Each node has R children, one for every possible char.
+-> Store values in nodes corresponding to last chars in key.
+-> Root represents all strings coming out of each root is a link
+   to a subtrie that contains all child letters of that parent letter of subtrie..
+-> Node corresponding to last letter of key/string has the key-value associated with it.
+-> *****Searches in tries work by following the links corresponding to each char in the key.
+-> We get a search hit when we find the end node of our string and match the
+   formed string with given string. The search must also end at a non-null value.
+-> Search miss is when we reach a null link OR a node where search end has null value.
+-> So for example; if we are following the links traversing dowm the tree and then
+   we are trying to find a certain letter from our current node but DNE, then search miss.
+-> Alternatively, if we go down the tree and we end up creating a string that matches the string
+   we wanted to find, but the last node of this string in the trie does NOT have a value associated
+   with it, then that means that string does NOT exist as a valid string in the trie. Remember,
+   a valid string has a value associated with its last key.
+-> ***** Insertion works similar to search where we go down each key. 
+-> If we encounter a null link, we create a null node or pointer of the letter in string currently set.
+-> Once encounter last key/index char in string, set the value in that node to mark it as the end of
+   a string, thereby effectively making it a VALID string in the trie if we want to search for it later.
+-> Log base R times N search miss. W for search hit. L for insert. (R+1)N space complexity.
+
+********TERNARY SEARCH TREES(TST)***********
+-> Store chars and vals in nodes.
+-> Using concept of 3-way quicksort.
+-> No longer R partitions like R-way tries, now only 3
+-> Each node has 3 children; smaller(left),equal(middle),larger(right).
+-> We go down middle link if our string contains this root element.
+-> We then strip off this element from our string and use the next
+   character/element and see if it matches the new given root OR if its larger
+   or smaller than it. 
+-> If its larger, go to right. If smaller, go to left. If equal, strip this char
+   and move down to next key char.
+-> So we continue this process of following the links corresponding to each char
+   in the key.
+-> ****Search hit****: Node where search ends has non-null value
+-> ****Search miss***: Reach a null link or node where search ends
+			have null value.
+
+****TST vs R-WAY-Tries vs HASHING vs Red-Black BST*****:
+-> TST has better improved space usage compared to R-way tries
+   since it DOES NOT have R-null links for every character.
+-> However, TSTs have worse search hit and miss than R-way tries because
+   height of trees are NOT the same and theres only 3 nodes to go, whereas
+   R-way tries had many nodes to go down, so reduced height, so faster search
+   hit and miss for R-way Tries.
+-> Hashing needs to examine entire key and performance relies on hash function.
+-> TSTs only work for strings or digital keys whereas Hashing works for all.
+-> TSTs only examine just enough key chars(Sublinear).
+-> TST search miss may involve only few characters.
+-> ***Summary***
+	-> TST are faster than hashing especially for search misses for strings!
+	-> More flexible than RRB BSTs.
+	-> Better space usage than R-way tries but worse search hit and miss.
+
+
+*******CH 5.3: Substring Seach Algos:*******
+->BruteForce
+	->Have pointer indices i and j.
+	-> Use j to check for next index in text
+	-> If matches index of pattern(i), then keep going until reads
+	   entire pattern.
+	-> If mismatch, shift i-index over 1 to the right to check next character
+	   So new start head to see if a string exists.
+	ie: Pattern: NEEDLE
+	    TEXT: INAHAYSTACKNEEDLEINA
+	    This algo can be slow if text and pattern have repetition on chars
+	    Worse case: ~MN char compares where M is length of pattern. ~O(N^2).
+	-> This algo also uses a backup for every mismatch.
+	-> This means it backsup and re-checks every char already seen.
+	-> Best case is if same as M(pattern string), so just needs n-passes.
+
+->Boyer-Moore Algo(Right to left):
+	-> Scans chars in pattern from right to left.
+	-> Can skip as many as M text chars when finding one not in pattern.
+	-> We check last char index # of M in N and if not same, we skip
+	   skip checking over the elements to the left since it is clearly false
+  	   as last element DOES NOT MATCH of position in TEXT and last index of Pattern.
+	-> So right to left algo from index that are multiples of string M length.
+	-> TYpical case is ~N/M compares for a pattern of length M and text length N.
+	-> Sublinear
+	-> Worst case: Bad as Brute FOrce ~MN or O(N^2).
+
+-> Rabin-Karp Algo:
+	-> Basic Idea: Modular Hashing.
+	-> Compute hash of patterns 0 to M-1
+	-> For each i, compute a hash of etxt chars i to M+i-1
+	->If pattern hash = text substring hash, check for a match.
+	-> Modular hashing is take a number and divide by a prime.
+	-> Horners method: Linear time method to eval degree-m Polynomial.
+-> TWO VERSIONS:
+	-> Monte Carlo and Las Vegas
+	->Monte Carlo
+		-> Pick Q large enough that probability of same hash-value
+		   for 2 strings are low.
+		-> Return match if hasn't match.
+		-> Guarantees algo will be quick w/ low probability gets wrong.
+		-> Always runs linear time
+		-> Extremely likely return correct answer but still possibility
+		   of wrong answer.
+	-> Las Vegas
+		->Guaranteed correct answer.
+		-> Check for substring match if hasn't matched.
+		-> COntinue search if collisions are false.
+		->Extremely likely to run in linear time
+		-> Worst case: O(MN)
