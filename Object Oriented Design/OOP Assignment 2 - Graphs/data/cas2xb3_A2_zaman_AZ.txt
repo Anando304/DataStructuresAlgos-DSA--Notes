@@ -1,0 +1,21 @@
+SFWRENG 2XB3
+Anando Zaman
+I hereby attest that the code submitted is my individual work.
+
+Assumptions And Design decisions:
+The MainActivity class basically acts like the controller to execute BFS & DFS to find the path from Boston To Minneapolis.
+This class also executes Dijkstras_shortpath.java located in "CAS2xb3_A2_zaman_AZ\src\CAS2xb3_A2_zaman_AZ\ShortestPathAlgos" folder.
+The MainActivity class gets the start and end city from the input.txt file located in this same data folder.
+The start city here is the first line which is BOSTON.
+The end city is the second line which is MINNEAPOLIS.
+
+When running any of the graph traversal,shortest path, or searching algorithms, the graph_create class has to be CALLED FIRST to initialize the graph.
+The graph_create.java file is located in ".\CAS2xb3_A2_zaman_AZ\src\CAS2xb3_A2_zaman_AZ\GraphCreation"
+
+The initial_cities_list() method needs to first be executed from the graph_create class. This is so that the list of all available cities are found
+Next, an object of the graph_create class has to be made which represents the graph of the entire system of cities.
+Following this, it is crucial that the create_edges() method of the graph_create object is executed so that the adjacency lists for each city can be added to the
+corresponding cities in the graph.
+These are the steps that are NECESSARY TO CREATE the GRAPH before running any other java files.
+
+The MainActivity.java file takes care of running all these other files

@@ -1,0 +1,51 @@
+Author: Anando Zaman
+MACID: Zamana11
+Course: SE 2XB3
+
+Assignment-2 Questions:
+3.1:
+The graph chosen to best solve the problem is the undirected graph. This is chosen because there are routes in
+the connected_cities dataset that go in both directions. Instead of having a digraph and worrying about the directions,
+the undirected graph is simpler to trace back to the given cities. The nodes in the graph represent the various cities available
+from the "UScities" dataset. These will be combined with edges which will help connect the cities. The edges in this context
+represent the specific paths with a meal cost weighting.
+
+The algorithms of Quicksort will be useful in sorting the menu.csv dataset in ascending order of price. This is
+necessary in efficiently finding the meal items with the least cost when selecting a meal for a given city. 
+Binary Search will be used to find the the restaurants for the given states that also fall within 0.5 range
+difference for longitude and latitude.
+
+The algorithms of DFS and BFS can be useful in finding paths from start to end cities. However, the optimal
+ cost problem cannot be addressed using these two path algorithms. Dijkstra's algorithm can be of use here
+ as it can find the path with the least meal cost. Each time a new city is visited, it will check if any adjacent
+ nodes(cities) are visited. If a specific adjacent node is visited, the algorithm will then check if a new edge can be created 
+that results in a cheaper cost to reach that node. This can be done by selecting an item from the sorted menu dataset. However,
+the meal item chosen has to be different from the one chosen in the previous node. This is because choosing the same meal at the
+same restaurant for different cities is prohibited. If the above conditions are met, then a new edge can be formed with the 
+cost of the new meal while the old edge is discarded. This ensures the least cost path can be found to solve the problem given
+in the specifications.
+
+3.2:
+The BFS algorithm finds the path with the fewest steps. This is because BFS does level order traversal which means it can quickly
+find the path if it is closer to the start(root) node. On the other hand, DFS finds the path with greater steps as it goes down to the end of each
+path recursively until it finds the end node. This can be greatly inefficient for paths closer to the root node. As more roots are 
+added, DFS will spend more time looking through increased node depth. This means that BFS will always operate quicker than DFS even
+ when additional nodes are appended to graph. However, this does not mean that BFS returns the shortest path if meal cost weights are
+considered. For that situation, Dijkstra's algorithm can be useful.
+
+
+3.4:
+Dikstra's algorithm can be implemented to find the lowest cost route as it is a type of shortest path algorithm.
+The complexity of Dikstra's algorithm depends upon the way the priority Queue is implemented along with its
+operations(V-insert, V-deleteMin, E-decreaseKey).
+
+Generally, the priority queue is implemented as a Binary Heap instead of an unordered/ordered array because it has
+faster time complexity for the various operations. Dikstra's algorithm using a Binary Heap results in O(E log V)
+complexity. This is because delete-min take O(1) complexity to find/remove min-node with an additional O(logV) 
+operations for swim operations to heapify and update the heap order. This means deleteMin operations alone take
+O(logV) time and has to be done for E-edges which results in O(ElogV) time complexity in total. This is because
+each of the operations listed in the above paragraph also take log V complexity.
+
+If the number of stops or restaurants is increased, it does not affect the time complexitity. The complexity still
+remains at O(ElogV), where E is number of edges and V is number of vertices. This algorithm runs proportional 
+to vertices and edges. Therefore, additional vertices and edges will not affect the time complexity
